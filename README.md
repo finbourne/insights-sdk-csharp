@@ -1,15 +1,15 @@
 ![LUSID by Finbourne](https://content.finbourne.com/LUSID_repo.png)
 
-# ${REPO_NAME}
+# Insights SDK C#
 
 ## Getting Started
 
 ## Contributing
 
-We welcome community participation in our tools. For information on contributing see our article [here](/finbourne/${REPO_NAME}/docs)
+We welcome community participation in our tools. For information on contributing see our article [here](/finbourne/insights-sdk-csharp/docs)
 
 ## Reporting Issues
-If you encounter any issues please report these the Github [issues page](https://github.com/finbourne/${REPO_NAME}/issues).
+If you encounter any issues please report these the Github [issues page](https://github.com/finbourne/insights-sdk-csharp/issues).
 
 ---
 
