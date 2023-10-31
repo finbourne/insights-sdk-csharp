@@ -6,7 +6,7 @@
 
 ## Contributing
 
-We welcome community participation in our tools. For information on contributing see our article [here](/finbourne/insights-sdk-csharp/docs)
+We welcome community participation in our tools. For information on contributing see our article [here](https://github.com/finbourne/insights-sdk-csharp/docs)
 
 ## Reporting Issues
 If you encounter any issues please report these the Github [issues page](https://github.com/finbourne/insights-sdk-csharp/issues).
