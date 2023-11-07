@@ -18,7 +18,7 @@ namespace Finbourne.Insights.Sdk.Extensions
         /// <summary>
         /// The header that the request id is contained within.
         /// </summary>
-        public const string RequestIdHeader = "lusid-meta-requestid";
+        public const string RequestIdHeader = "insights-meta-requestid";
         
         /// <summary>
         /// The header that the Date Time Offset is contained within.
