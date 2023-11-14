@@ -1,6 +1,6 @@
 # Finbourne.Insights.Sdk.Api.RequestsApi
 
-All URIs are relative to *https://fbn-ci.lusid.com/insights*
+All URIs are relative to *https://fbn-prd.lusid.com/insights*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/insights";
+            config.BasePath = "https://fbn-prd.lusid.com/insights";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -124,7 +124,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/insights";
+            config.BasePath = "https://fbn-prd.lusid.com/insights";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -218,7 +218,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/insights";
+            config.BasePath = "https://fbn-prd.lusid.com/insights";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -312,7 +312,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/insights";
+            config.BasePath = "https://fbn-prd.lusid.com/insights";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
