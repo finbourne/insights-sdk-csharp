@@ -40,7 +40,7 @@ namespace Finbourne.Insights.Sdk.Model
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
-        [DataMember(Name = "count", EmitDefaultValue = false)]
+        [DataMember(Name = "count", EmitDefaultValue = true)]
         public int Count { get; private set; }
 
         /// <summary>

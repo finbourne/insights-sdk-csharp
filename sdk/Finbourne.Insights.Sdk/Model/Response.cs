@@ -88,7 +88,7 @@ namespace Finbourne.Insights.Sdk.Model
         /// Http Status Code of the request.
         /// </summary>
         /// <value>Http Status Code of the request.</value>
-        [DataMember(Name = "statusCode", EmitDefaultValue = false)]
+        [DataMember(Name = "statusCode", EmitDefaultValue = true)]
         public int StatusCode { get; set; }
 
         /// <summary>
