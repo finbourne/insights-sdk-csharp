@@ -15,6 +15,7 @@ using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Net.Http;
+using Finbourne.Insights.Sdk.Extensions;
 using Finbourne.Insights.Sdk.Client.Auth;
 
 namespace Finbourne.Insights.Sdk.Client
@@ -543,7 +544,7 @@ namespace Finbourne.Insights.Sdk.Client
             string report = "C# SDK (Finbourne.Insights.Sdk) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 0.0.763\n";
+            report += "    Version of the API: 0.0.764\n";
             report += "    SDK Package Version: 2.0.0\n";
 
             return report;

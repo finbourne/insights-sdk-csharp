@@ -6,6 +6,7 @@
  */
 
 using System.Collections.Generic;
+using Finbourne.Insights.Sdk.Extensions;
 
 namespace Finbourne.Insights.Sdk.Client
 {
