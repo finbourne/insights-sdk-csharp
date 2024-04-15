@@ -4,16 +4,16 @@ All URIs are relative to *https://fbn-prd.lusid.com/insights*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetRequest**](RequestsApi.md#getrequest) | **GET** /api/requests/{id}/request | [EARLY ACCESS] GetRequest: Get the request content for a specific API request. |
-| [**GetRequestLog**](RequestsApi.md#getrequestlog) | **GET** /api/requests/{id} | [EARLY ACCESS] GetRequestLog: Get the log for a specific API request. |
-| [**GetResponse**](RequestsApi.md#getresponse) | **GET** /api/requests/{id}/response | [EARLY ACCESS] GetResponse: Get the response for a specific API request. |
-| [**ListRequestLogs**](RequestsApi.md#listrequestlogs) | **GET** /api/requests | [EARLY ACCESS] ListRequestLogs: Get the logs for API requests. |
+| [**GetRequest**](RequestsApi.md#getrequest) | **GET** /api/requests/{id}/request | GetRequest: Get the request content for a specific API request. |
+| [**GetRequestLog**](RequestsApi.md#getrequestlog) | **GET** /api/requests/{id} | GetRequestLog: Get the log for a specific API request. |
+| [**GetResponse**](RequestsApi.md#getresponse) | **GET** /api/requests/{id}/response | GetResponse: Get the response for a specific API request. |
+| [**ListRequestLogs**](RequestsApi.md#listrequestlogs) | **GET** /api/requests | ListRequestLogs: Get the logs for API requests. |
 
 <a id="getrequest"></a>
 # **GetRequest**
 > Request GetRequest (string id)
 
-[EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+GetRequest: Get the request content for a specific API request.
 
 ### Example
 ```csharp
@@ -39,7 +39,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+                // GetRequest: Get the request content for a specific API request.
                 Request result = apiInstance.GetRequest(id);
                 Debug.WriteLine(result);
             }
@@ -60,7 +60,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+    // GetRequest: Get the request content for a specific API request.
     ApiResponse<Request> response = apiInstance.GetRequestWithHttpInfo(id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -107,7 +107,7 @@ catch (ApiException e)
 # **GetRequestLog**
 > RequestLog GetRequestLog (string id)
 
-[EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+GetRequestLog: Get the log for a specific API request.
 
 ### Example
 ```csharp
@@ -133,7 +133,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+                // GetRequestLog: Get the log for a specific API request.
                 RequestLog result = apiInstance.GetRequestLog(id);
                 Debug.WriteLine(result);
             }
@@ -154,7 +154,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+    // GetRequestLog: Get the log for a specific API request.
     ApiResponse<RequestLog> response = apiInstance.GetRequestLogWithHttpInfo(id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -201,7 +201,7 @@ catch (ApiException e)
 # **GetResponse**
 > Response GetResponse (string id)
 
-[EARLY ACCESS] GetResponse: Get the response for a specific API request.
+GetResponse: Get the response for a specific API request.
 
 ### Example
 ```csharp
@@ -227,7 +227,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetResponse: Get the response for a specific API request.
+                // GetResponse: Get the response for a specific API request.
                 Response result = apiInstance.GetResponse(id);
                 Debug.WriteLine(result);
             }
@@ -248,7 +248,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetResponse: Get the response for a specific API request.
+    // GetResponse: Get the response for a specific API request.
     ApiResponse<Response> response = apiInstance.GetResponseWithHttpInfo(id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -295,7 +295,7 @@ catch (ApiException e)
 # **ListRequestLogs**
 > ResourceListWithHistogramOfRequestLog ListRequestLogs (string? filter = null, string? sortBy = null, int? limit = null, string? page = null, string? histogramInterval = null)
 
-[EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
+ListRequestLogs: Get the logs for API requests.
 
 ### Example
 ```csharp
@@ -325,7 +325,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
+                // ListRequestLogs: Get the logs for API requests.
                 ResourceListWithHistogramOfRequestLog result = apiInstance.ListRequestLogs(filter, sortBy, limit, page, histogramInterval);
                 Debug.WriteLine(result);
             }
@@ -346,7 +346,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
+    // ListRequestLogs: Get the logs for API requests.
     ApiResponse<ResourceListWithHistogramOfRequestLog> response = apiInstance.ListRequestLogsWithHttpInfo(filter, sortBy, limit, page, histogramInterval);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

@@ -25,7 +25,7 @@ namespace Finbourne.Insights.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+        /// GetRequest: Get the request content for a specific API request.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
@@ -34,7 +34,7 @@ namespace Finbourne.Insights.Sdk.Api
         Request GetRequest(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+        /// GetRequest: Get the request content for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -45,7 +45,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>ApiResponse of Request</returns>
         ApiResponse<Request> GetRequestWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+        /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
@@ -54,7 +54,7 @@ namespace Finbourne.Insights.Sdk.Api
         RequestLog GetRequestLog(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+        /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -65,7 +65,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>ApiResponse of RequestLog</returns>
         ApiResponse<RequestLog> GetRequestLogWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request.
+        /// GetResponse: Get the response for a specific API request.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
@@ -74,7 +74,7 @@ namespace Finbourne.Insights.Sdk.Api
         Response GetResponse(string id, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request.
+        /// GetResponse: Get the response for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -85,7 +85,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>ApiResponse of Response</returns>
         ApiResponse<Response> GetResponseWithHttpInfo(string id, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
+        /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
@@ -98,7 +98,7 @@ namespace Finbourne.Insights.Sdk.Api
         ResourceListWithHistogramOfRequestLog ListRequestLogs(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
+        /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
         /// <remarks>
         /// 
@@ -122,7 +122,7 @@ namespace Finbourne.Insights.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+        /// GetRequest: Get the request content for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -135,7 +135,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<Request> GetRequestAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+        /// GetRequest: Get the request content for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -147,7 +147,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>Task of ApiResponse (Request)</returns>
         System.Threading.Tasks.Task<ApiResponse<Request>> GetRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+        /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -160,7 +160,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<RequestLog> GetRequestLogAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+        /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -172,7 +172,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>Task of ApiResponse (RequestLog)</returns>
         System.Threading.Tasks.Task<ApiResponse<RequestLog>> GetRequestLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request.
+        /// GetResponse: Get the response for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -185,7 +185,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<Response> GetResponseAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request.
+        /// GetResponse: Get the response for a specific API request.
         /// </summary>
         /// <remarks>
         /// 
@@ -197,7 +197,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>Task of ApiResponse (Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<Response>> GetResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
+        /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
         /// <remarks>
         /// 
@@ -214,7 +214,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<ResourceListWithHistogramOfRequestLog> ListRequestLogsAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
+        /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
         /// <remarks>
         /// 
@@ -347,7 +347,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request. 
+        /// GetRequest: Get the request content for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
@@ -360,7 +360,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request. 
+        /// GetRequest: Get the request content for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
@@ -435,7 +435,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request. 
+        /// GetRequest: Get the request content for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
@@ -449,7 +449,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequest: Get the request content for a specific API request. 
+        /// GetRequest: Get the request content for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
@@ -527,7 +527,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request. 
+        /// GetRequestLog: Get the log for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
@@ -540,7 +540,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request. 
+        /// GetRequestLog: Get the log for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
@@ -615,7 +615,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request. 
+        /// GetRequestLog: Get the log for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
@@ -629,7 +629,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRequestLog: Get the log for a specific API request. 
+        /// GetRequestLog: Get the log for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
@@ -707,7 +707,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request. 
+        /// GetResponse: Get the response for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
@@ -720,7 +720,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request. 
+        /// GetResponse: Get the response for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
@@ -795,7 +795,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request. 
+        /// GetResponse: Get the response for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
@@ -809,7 +809,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetResponse: Get the response for a specific API request. 
+        /// GetResponse: Get the response for a specific API request. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
@@ -887,7 +887,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests. 
+        /// ListRequestLogs: Get the logs for API requests. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
@@ -904,7 +904,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests. 
+        /// ListRequestLogs: Get the logs for API requests. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
@@ -996,7 +996,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests. 
+        /// ListRequestLogs: Get the logs for API requests. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
@@ -1014,7 +1014,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRequestLogs: Get the logs for API requests. 
+        /// ListRequestLogs: Get the logs for API requests. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
