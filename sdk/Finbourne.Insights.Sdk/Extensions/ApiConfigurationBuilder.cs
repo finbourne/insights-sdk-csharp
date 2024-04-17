@@ -32,7 +32,7 @@ namespace Finbourne.Insights.Sdk.Extensions
         private static readonly Dictionary<string, string> ConfigNamesToSecrets = new Dictionary<string, string>()
         {
             { "TokenUrl", "tokenUrl" },
-            { "BaseUrl", "finbourne-insightsUrl" },
+            { "BaseUrl", "finbourne_insightsUrl" },
             { "ClientId", "clientId" },
             { "ClientSecret", "clientSecret" },
             { "Username", "username" },
@@ -68,6 +68,8 @@ namespace Finbourne.Insights.Sdk.Extensions
             var apiConfig = new ApiConfiguration();
             config.Bind(apiConfig);
 
+            apiConfig = CheckBaseUrl(apiConfig);
+
             if (apiConfig.HasMissingConfig())
             {
                 var missingValues = apiConfig.GetMissingConfig()
@@ -85,7 +87,10 @@ namespace Finbourne.Insights.Sdk.Extensions
             var apiConfig = new ApiConfiguration
             {
                 TokenUrl = Environment.GetEnvironmentVariable("FBN_TOKEN_URL") ?? Environment.GetEnvironmentVariable("fbn_token_url"),
-                BaseUrl = Environment.GetEnvironmentVariable("FBN_FINBOURNE-INSIGHTS_API_URL") ?? Environment.GetEnvironmentVariable("fbn_finbourne-insights_api_url"),
+                BaseUrl = (Environment.GetEnvironmentVariable("FBN_FINBOURNE-INSIGHTS_API_URL") ?? 
+                           Environment.GetEnvironmentVariable("fbn_finbourne-insights_api_url")) ?? 
+                          (Environment.GetEnvironmentVariable("FBN_FINBOURNE_INSIGHTS_API_URL") ?? 
+                           Environment.GetEnvironmentVariable("fbn_finbourne_insights_api_url")),
                 ClientId = Environment.GetEnvironmentVariable("FBN_CLIENT_ID") ?? Environment.GetEnvironmentVariable("fbn_client_id"),
                 ClientSecret = Environment.GetEnvironmentVariable("FBN_CLIENT_SECRET") ?? Environment.GetEnvironmentVariable("fbn_client_secret"),
                 Username = Environment.GetEnvironmentVariable("FBN_USERNAME") ?? Environment.GetEnvironmentVariable("fbn_username"),
@@ -119,6 +124,8 @@ namespace Finbourne.Insights.Sdk.Extensions
                             .Build();
             config.GetSection("api").Bind(apiConfig);
 
+            apiConfig = CheckBaseUrl(apiConfig);
+
             if (apiConfig.HasMissingConfig())
             {
                 var missingValues = apiConfig.GetMissingConfig()
@@ -129,6 +136,16 @@ namespace Finbourne.Insights.Sdk.Extensions
             }
 
             return apiConfig;
+        }
+
+        private static ApiConfiguration CheckBaseUrl(ApiConfiguration parsedConfig) 
+        {
+            if(string.IsNullOrWhiteSpace(parsedConfig.BaseUrl))
+            {
+                parsedConfig.BaseUrl = parsedConfig.BackUpBaseUrl;
+            }
+
+            return parsedConfig;
         }
     }
 }
