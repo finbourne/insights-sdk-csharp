@@ -20,7 +20,6 @@
     <PackageTags>FINBOURNE, LUSID, SDK</PackageTags>
     <Nullable>annotations</Nullable>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <LangVersion>11</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
