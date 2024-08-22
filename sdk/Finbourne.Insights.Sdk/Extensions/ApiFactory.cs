@@ -65,7 +65,7 @@ namespace Finbourne.Insights.Sdk.Extensions
                 if (string.IsNullOrWhiteSpace(apiConfiguration.BaseUrl))
                     throw new ArgumentNullException(
                         nameof(apiConfiguration.BaseUrl),
-                        $"BaseUrl Uri missing. Please specify either FBN_FINBOURNE-INSIGHTS_API_URL environment variable or finbourne-insightsUrl in secrets.json.");
+                        $"BaseUrl Uri missing. Please specify either FBN_INSIGHTS_URL environment variable or insightsUrl in secrets.json.");
 
                 throw new UriFormatException($"Invalid Uri: {apiConfiguration.BaseUrl}");
             }
