@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Insights.Sdk.Client;
+using Finbourne.Insights.Sdk.Extensions;
 using Finbourne.Insights.Sdk.Client.Auth;
 using Finbourne.Insights.Sdk.Model;
 
@@ -36,8 +37,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Request</returns>
-        Request GetRequest(string id, int operationIndex = 0);
+        Request GetRequest(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRequest: Get the request content for a specific API request.
@@ -48,16 +50,18 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Request</returns>
-        ApiResponse<Request> GetRequestWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<Request> GetRequestWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RequestLog</returns>
-        RequestLog GetRequestLog(string id, int operationIndex = 0);
+        RequestLog GetRequestLog(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRequestLog: Get the log for a specific API request.
@@ -68,16 +72,18 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RequestLog</returns>
-        ApiResponse<RequestLog> GetRequestLogWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<RequestLog> GetRequestLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetResponse: Get the response for a specific API request.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Response</returns>
-        Response GetResponse(string id, int operationIndex = 0);
+        Response GetResponse(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetResponse: Get the response for a specific API request.
@@ -88,8 +94,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> GetResponseWithHttpInfo(string id, int operationIndex = 0);
+        ApiResponse<Response> GetResponseWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
@@ -100,8 +107,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListWithHistogramOfRequestLog</returns>
-        ResourceListWithHistogramOfRequestLog ListRequestLogs(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0);
+        ResourceListWithHistogramOfRequestLog ListRequestLogs(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListRequestLogs: Get the logs for API requests.
@@ -116,8 +124,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListWithHistogramOfRequestLog</returns>
-        ApiResponse<ResourceListWithHistogramOfRequestLog> ListRequestLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0);
+        ApiResponse<ResourceListWithHistogramOfRequestLog> ListRequestLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -137,8 +146,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Request</returns>
-        System.Threading.Tasks.Task<Request> GetRequestAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Request> GetRequestAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRequest: Get the request content for a specific API request.
@@ -150,8 +160,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Request)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Request>> GetRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Request>> GetRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
@@ -162,8 +173,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RequestLog</returns>
-        System.Threading.Tasks.Task<RequestLog> GetRequestLogAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RequestLog> GetRequestLogAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRequestLog: Get the log for a specific API request.
@@ -175,8 +187,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RequestLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestLog>> GetRequestLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RequestLog>> GetRequestLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetResponse: Get the response for a specific API request.
         /// </summary>
@@ -187,8 +200,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> GetResponseAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response> GetResponseAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetResponse: Get the response for a specific API request.
@@ -200,8 +214,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> GetResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Response>> GetResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
@@ -216,8 +231,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListWithHistogramOfRequestLog</returns>
-        System.Threading.Tasks.Task<ResourceListWithHistogramOfRequestLog> ListRequestLogsAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListWithHistogramOfRequestLog> ListRequestLogsAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListRequestLogs: Get the logs for API requests.
@@ -233,8 +249,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListWithHistogramOfRequestLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListWithHistogramOfRequestLog>> ListRequestLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListWithHistogramOfRequestLog>> ListRequestLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -267,9 +284,15 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns></returns>
         public RequestsApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Insights.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Insights.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Insights.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Insights.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Insights.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Insights.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Insights.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -358,10 +381,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Request</returns>
-        public Request GetRequest(string id, int operationIndex = 0)
+        public Request GetRequest(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<Request> localVarResponse = GetRequestWithHttpInfo(id);
+            Finbourne.Insights.Sdk.Client.ApiResponse<Request> localVarResponse = GetRequestWithHttpInfo(id, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -371,8 +395,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Request</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<Request> GetRequestWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<Request> GetRequestWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -381,6 +406,16 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -447,10 +482,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Request</returns>
-        public async System.Threading.Tasks.Task<Request> GetRequestAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Request> GetRequestAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<Request> localVarResponse = await GetRequestWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<Request> localVarResponse = await GetRequestWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -461,8 +497,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the content for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Request)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<Request>> GetRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<Request>> GetRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -472,6 +509,16 @@ namespace Finbourne.Insights.Sdk.Api
 
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -538,10 +585,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>RequestLog</returns>
-        public RequestLog GetRequestLog(string id, int operationIndex = 0)
+        public RequestLog GetRequestLog(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog> localVarResponse = GetRequestLogWithHttpInfo(id);
+            Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog> localVarResponse = GetRequestLogWithHttpInfo(id, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -551,8 +599,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RequestLog</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog> GetRequestLogWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog> GetRequestLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -561,6 +610,16 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -627,10 +686,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RequestLog</returns>
-        public async System.Threading.Tasks.Task<RequestLog> GetRequestLogAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RequestLog> GetRequestLogAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog> localVarResponse = await GetRequestLogWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog> localVarResponse = await GetRequestLogWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -641,8 +701,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the log for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RequestLog)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog>> GetRequestLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog>> GetRequestLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -652,6 +713,16 @@ namespace Finbourne.Insights.Sdk.Api
 
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -718,10 +789,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Response</returns>
-        public Response GetResponse(string id, int operationIndex = 0)
+        public Response GetResponse(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<Response> localVarResponse = GetResponseWithHttpInfo(id);
+            Finbourne.Insights.Sdk.Client.ApiResponse<Response> localVarResponse = GetResponseWithHttpInfo(id, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -731,8 +803,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Response</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<Response> GetResponseWithHttpInfo(string id, int operationIndex = 0)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<Response> GetResponseWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -741,6 +814,16 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -807,10 +890,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> GetResponseAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response> GetResponseAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<Response> localVarResponse = await GetResponseWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<Response> localVarResponse = await GetResponseWithHttpInfoAsync(id, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -821,8 +905,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="id">The identifier of the request to obtain the response for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<Response>> GetResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<Response>> GetResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -832,6 +917,16 @@ namespace Finbourne.Insights.Sdk.Api
 
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -902,10 +997,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListWithHistogramOfRequestLog</returns>
-        public ResourceListWithHistogramOfRequestLog ListRequestLogs(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0)
+        public ResourceListWithHistogramOfRequestLog ListRequestLogs(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog> localVarResponse = ListRequestLogsWithHttpInfo(filter, sortBy, limit, page, histogramInterval);
+            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog> localVarResponse = ListRequestLogsWithHttpInfo(filter, sortBy, limit, page, histogramInterval, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -919,10 +1015,21 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListWithHistogramOfRequestLog</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog> ListRequestLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog> ListRequestLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1012,10 +1119,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListWithHistogramOfRequestLog</returns>
-        public async System.Threading.Tasks.Task<ResourceListWithHistogramOfRequestLog> ListRequestLogsAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListWithHistogramOfRequestLog> ListRequestLogsAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog> localVarResponse = await ListRequestLogsWithHttpInfoAsync(filter, sortBy, limit, page, histogramInterval, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog> localVarResponse = await ListRequestLogsWithHttpInfoAsync(filter, sortBy, limit, page, histogramInterval, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1030,11 +1138,22 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="histogramInterval">Optional interval to use in a histogram of the returned values. If not provided, no histogram will be generated. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListWithHistogramOfRequestLog)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog>> ListRequestLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog>> ListRequestLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };

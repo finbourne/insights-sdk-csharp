@@ -44,11 +44,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuditingApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuditingApi>();
             var createAuditEntry = new CreateAuditEntry?(); // CreateAuditEntry? | Information about the entry to be created. (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // AuditEntry result = apiInstance.CreateEntry(createAuditEntry, opts: opts);
+
                 // [EARLY ACCESS] CreateEntry: Create (persist) and audit entry..
                 AuditEntry result = apiInstance.CreateEntry(createAuditEntry);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -148,10 +159,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuditingApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuditingApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfAuditProcessSummary result = apiInstance.GetProcesses(opts: opts);
+
                 // [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
                 ResourceListOfAuditProcessSummary result = apiInstance.GetProcesses();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -245,6 +267,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AuditingApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AuditingApi>();
             var filter = "filter_example";  // string? | The filter to be applied to the results. (optional) 
             var sortBy = "sortBy_example";  // string? | The order to return the entries in. (optional) 
@@ -253,6 +283,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ScrollableCollectionOfAuditEntry result = apiInstance.ListEntries(filter, sortBy, size, state, opts: opts);
+
                 // [EARLY ACCESS] ListEntries: Get the audit entries.
                 ScrollableCollectionOfAuditEntry result = apiInstance.ListEntries(filter, sortBy, size, state);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

@@ -43,11 +43,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AccessEvaluationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AccessEvaluationsApi>();
             var id = "id_example";  // string | The identifier of the access evaluation to obtain the log for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // AccessEvaluationLog result = apiInstance.GetAccessEvaluationLog(id, opts: opts);
+
                 // [EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation.  This endpoint will be deprecated in the near future.
                 AccessEvaluationLog result = apiInstance.GetAccessEvaluationLog(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -144,6 +155,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AccessEvaluationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AccessEvaluationsApi>();
             var startAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Start date from which point to fetch logs. (optional) 
             var endAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | End date to which point to fetch logs. (optional) 
@@ -155,6 +174,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListWithHistogramOfAccessEvaluationLog result = apiInstance.ListAccessEvaluationLogs(startAt, endAt, filter, sortBy, limit, page, histogramInterval, opts: opts);
+
                 // [EARLY ACCESS] ListAccessEvaluationLogs: List the logs for access evaluations.
                 ResourceListWithHistogramOfAccessEvaluationLog result = apiInstance.ListAccessEvaluationLogs(startAt, endAt, filter, sortBy, limit, page, histogramInterval);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Insights.Sdk.Client;
+using Finbourne.Insights.Sdk.Extensions;
 using Finbourne.Insights.Sdk.Client.Auth;
 using Finbourne.Insights.Sdk.Model;
 
@@ -36,8 +37,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>AuditEntry</returns>
-        AuditEntry CreateEntry(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0);
+        AuditEntry CreateEntry(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] CreateEntry: Create (persist) and audit entry..
@@ -48,8 +50,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of AuditEntry</returns>
-        ApiResponse<AuditEntry> CreateEntryWithHttpInfo(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0);
+        ApiResponse<AuditEntry> CreateEntryWithHttpInfo(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
         /// </summary>
@@ -58,8 +61,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfAuditProcessSummary</returns>
-        ResourceListOfAuditProcessSummary GetProcesses(int operationIndex = 0);
+        ResourceListOfAuditProcessSummary GetProcesses(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
@@ -69,8 +73,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfAuditProcessSummary</returns>
-        ApiResponse<ResourceListOfAuditProcessSummary> GetProcessesWithHttpInfo(int operationIndex = 0);
+        ApiResponse<ResourceListOfAuditProcessSummary> GetProcessesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListEntries: Get the audit entries.
         /// </summary>
@@ -83,8 +88,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="size">The maximum number of entries to return. (optional, default to 1000)</param>
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ScrollableCollectionOfAuditEntry</returns>
-        ScrollableCollectionOfAuditEntry ListEntries(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0);
+        ScrollableCollectionOfAuditEntry ListEntries(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] ListEntries: Get the audit entries.
@@ -98,8 +104,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="size">The maximum number of entries to return. (optional, default to 1000)</param>
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ScrollableCollectionOfAuditEntry</returns>
-        ApiResponse<ScrollableCollectionOfAuditEntry> ListEntriesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0);
+        ApiResponse<ScrollableCollectionOfAuditEntry> ListEntriesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -119,8 +126,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of AuditEntry</returns>
-        System.Threading.Tasks.Task<AuditEntry> CreateEntryAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AuditEntry> CreateEntryAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] CreateEntry: Create (persist) and audit entry..
@@ -132,8 +140,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (AuditEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditEntry>> CreateEntryWithHttpInfoAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AuditEntry>> CreateEntryWithHttpInfoAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
         /// </summary>
@@ -143,8 +152,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfAuditProcessSummary</returns>
-        System.Threading.Tasks.Task<ResourceListOfAuditProcessSummary> GetProcessesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfAuditProcessSummary> GetProcessesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
@@ -155,8 +165,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfAuditProcessSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfAuditProcessSummary>> GetProcessesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfAuditProcessSummary>> GetProcessesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListEntries: Get the audit entries.
         /// </summary>
@@ -170,8 +181,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ScrollableCollectionOfAuditEntry</returns>
-        System.Threading.Tasks.Task<ScrollableCollectionOfAuditEntry> ListEntriesAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ScrollableCollectionOfAuditEntry> ListEntriesAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EARLY ACCESS] ListEntries: Get the audit entries.
@@ -186,8 +198,9 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ScrollableCollectionOfAuditEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScrollableCollectionOfAuditEntry>> ListEntriesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ScrollableCollectionOfAuditEntry>> ListEntriesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -220,9 +233,15 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns></returns>
         public AuditingApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Insights.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Insights.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Insights.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Insights.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Insights.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Insights.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Insights.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -311,10 +330,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>AuditEntry</returns>
-        public AuditEntry CreateEntry(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0)
+        public AuditEntry CreateEntry(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry> localVarResponse = CreateEntryWithHttpInfo(createAuditEntry);
+            Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry> localVarResponse = CreateEntryWithHttpInfo(createAuditEntry, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -324,10 +344,21 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of AuditEntry</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry> CreateEntryWithHttpInfo(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry> CreateEntryWithHttpInfo(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json",
@@ -394,10 +425,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of AuditEntry</returns>
-        public async System.Threading.Tasks.Task<AuditEntry> CreateEntryAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AuditEntry> CreateEntryAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry> localVarResponse = await CreateEntryWithHttpInfoAsync(createAuditEntry, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry> localVarResponse = await CreateEntryWithHttpInfoAsync(createAuditEntry, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -408,11 +440,22 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="createAuditEntry">Information about the entry to be created. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (AuditEntry)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry>> CreateEntryWithHttpInfoAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry>> CreateEntryWithHttpInfoAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json", 
@@ -478,10 +521,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfAuditProcessSummary</returns>
-        public ResourceListOfAuditProcessSummary GetProcesses(int operationIndex = 0)
+        public ResourceListOfAuditProcessSummary GetProcesses(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary> localVarResponse = GetProcessesWithHttpInfo();
+            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary> localVarResponse = GetProcessesWithHttpInfo(opts: opts);
             return localVarResponse.Data;
         }
 
@@ -490,10 +534,21 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfAuditProcessSummary</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary> GetProcessesWithHttpInfo(int operationIndex = 0)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary> GetProcessesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -556,10 +611,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfAuditProcessSummary</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfAuditProcessSummary> GetProcessesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfAuditProcessSummary> GetProcessesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary> localVarResponse = await GetProcessesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary> localVarResponse = await GetProcessesWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -569,11 +625,22 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfAuditProcessSummary)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary>> GetProcessesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary>> GetProcessesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -640,10 +707,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="size">The maximum number of entries to return. (optional, default to 1000)</param>
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ScrollableCollectionOfAuditEntry</returns>
-        public ScrollableCollectionOfAuditEntry ListEntries(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0)
+        public ScrollableCollectionOfAuditEntry ListEntries(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry> localVarResponse = ListEntriesWithHttpInfo(filter, sortBy, size, state);
+            Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry> localVarResponse = ListEntriesWithHttpInfo(filter, sortBy, size, state, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -656,10 +724,21 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="size">The maximum number of entries to return. (optional, default to 1000)</param>
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ScrollableCollectionOfAuditEntry</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry> ListEntriesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry> ListEntriesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -742,10 +821,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ScrollableCollectionOfAuditEntry</returns>
-        public async System.Threading.Tasks.Task<ScrollableCollectionOfAuditEntry> ListEntriesAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ScrollableCollectionOfAuditEntry> ListEntriesAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry> localVarResponse = await ListEntriesWithHttpInfoAsync(filter, sortBy, size, state, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry> localVarResponse = await ListEntriesWithHttpInfoAsync(filter, sortBy, size, state, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -759,11 +839,22 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="state">The scrolling state, used to iterate through the data set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ScrollableCollectionOfAuditEntry)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry>> ListEntriesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry>> ListEntriesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };

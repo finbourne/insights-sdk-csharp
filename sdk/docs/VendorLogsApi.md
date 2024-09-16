@@ -45,11 +45,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<VendorLogsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<VendorLogsApi>();
             var id = "id_example";  // string | The identifier of the request to obtain the log for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // VendorLog result = apiInstance.GetVendorLog(id, opts: opts);
+
                 // [EXPERIMENTAL] GetVendorLog: Get the log for a specific vendor request.
                 VendorLog result = apiInstance.GetVendorLog(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -146,11 +157,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<VendorLogsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<VendorLogsApi>();
             var id = "id_example";  // string | The identifier of the request to obtain the content for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // VendorRequest result = apiInstance.GetVendorRequest(id, opts: opts);
+
                 // [EXPERIMENTAL] GetVendorRequest: Get the request body for a vendor request.
                 VendorRequest result = apiInstance.GetVendorRequest(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -247,11 +269,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<VendorLogsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<VendorLogsApi>();
             var id = "id_example";  // string | The identifier of the request to obtain the response for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // VendorResponse result = apiInstance.GetVendorResponse(id, opts: opts);
+
                 // [EXPERIMENTAL] GetVendorResponse: Get the response from a vendor request.
                 VendorResponse result = apiInstance.GetVendorResponse(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -348,6 +381,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<VendorLogsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<VendorLogsApi>();
             var filter = "filter_example";  // string? | Expression to filter the result set. Read more about <see href=\"https://support.lusid.com/filtering-results-from-lusid\"> filtering results from LUSID</see>. (optional) 
             var sortBy = "sortBy_example";  // string? | Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional) 
@@ -357,6 +398,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListWithHistogramOfVendorLog result = apiInstance.ListVendorLogs(filter, sortBy, limit, page, histogramInterval, opts: opts);
+
                 // [EXPERIMENTAL] ListVendorLogs: List the logs for vendor requests.
                 ResourceListWithHistogramOfVendorLog result = apiInstance.ListVendorLogs(filter, sortBy, limit, page, histogramInterval);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

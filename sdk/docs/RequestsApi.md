@@ -45,11 +45,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RequestsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RequestsApi>();
             var id = "id_example";  // string | The identifier of the request to obtain the content for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Request result = apiInstance.GetRequest(id, opts: opts);
+
                 // GetRequest: Get the request content for a specific API request.
                 Request result = apiInstance.GetRequest(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -146,11 +157,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RequestsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RequestsApi>();
             var id = "id_example";  // string | The identifier of the request to obtain the log for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RequestLog result = apiInstance.GetRequestLog(id, opts: opts);
+
                 // GetRequestLog: Get the log for a specific API request.
                 RequestLog result = apiInstance.GetRequestLog(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -247,11 +269,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RequestsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RequestsApi>();
             var id = "id_example";  // string | The identifier of the request to obtain the response for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Response result = apiInstance.GetResponse(id, opts: opts);
+
                 // GetResponse: Get the response for a specific API request.
                 Response result = apiInstance.GetResponse(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -348,6 +381,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RequestsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RequestsApi>();
             var filter = "filter_example";  // string? | Expression to filter the result set. Read more about <see href=\"https://support.lusid.com/filtering-results-from-lusid\"> filtering results from LUSID</see>. (optional) 
             var sortBy = "sortBy_example";  // string? | Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional) 
@@ -357,6 +398,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListWithHistogramOfRequestLog result = apiInstance.ListRequestLogs(filter, sortBy, limit, page, histogramInterval, opts: opts);
+
                 // ListRequestLogs: Get the logs for API requests.
                 ResourceListWithHistogramOfRequestLog result = apiInstance.ListRequestLogs(filter, sortBy, limit, page, histogramInterval);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
