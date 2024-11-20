@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Insights.Sdk.Client;
+using IApiAccessor = Finbourne.Insights.Sdk.Client.IApiAccessor;
 using Finbourne.Insights.Sdk.Extensions;
 using Finbourne.Insights.Sdk.Client.Auth;
 using Finbourne.Insights.Sdk.Model;
@@ -52,7 +52,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of AuditEntry</returns>
-        ApiResponse<AuditEntry> CreateEntryWithHttpInfo(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry> CreateEntryWithHttpInfo(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
         /// </summary>
@@ -75,7 +75,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfAuditProcessSummary</returns>
-        ApiResponse<ResourceListOfAuditProcessSummary> GetProcessesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary> GetProcessesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListEntries: Get the audit entries.
         /// </summary>
@@ -106,7 +106,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ScrollableCollectionOfAuditEntry</returns>
-        ApiResponse<ScrollableCollectionOfAuditEntry> ListEntriesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry> ListEntriesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -142,7 +142,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (AuditEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditEntry>> CreateEntryWithHttpInfoAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<AuditEntry>> CreateEntryWithHttpInfoAsync(CreateAuditEntry? createAuditEntry = default(CreateAuditEntry?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
         /// </summary>
@@ -167,7 +167,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfAuditProcessSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfAuditProcessSummary>> GetProcessesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfAuditProcessSummary>> GetProcessesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListEntries: Get the audit entries.
         /// </summary>
@@ -200,7 +200,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ScrollableCollectionOfAuditEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScrollableCollectionOfAuditEntry>> ListEntriesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ScrollableCollectionOfAuditEntry>> ListEntriesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? size = default(int?), string? state = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

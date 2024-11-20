@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Insights.Sdk.Client;
+using IApiAccessor = Finbourne.Insights.Sdk.Client.IApiAccessor;
 using Finbourne.Insights.Sdk.Extensions;
 using Finbourne.Insights.Sdk.Client.Auth;
 using Finbourne.Insights.Sdk.Model;
@@ -52,7 +52,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of AccessEvaluationLog</returns>
-        ApiResponse<AccessEvaluationLog> GetAccessEvaluationLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<AccessEvaluationLog> GetAccessEvaluationLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListAccessEvaluationLogs: List the logs for access evaluations.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListWithHistogramOfAccessEvaluationLog</returns>
-        ApiResponse<ResourceListWithHistogramOfAccessEvaluationLog> ListAccessEvaluationLogsWithHttpInfo(DateTimeOffset? startAt = default(DateTimeOffset?), DateTimeOffset? endAt = default(DateTimeOffset?), string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfAccessEvaluationLog> ListAccessEvaluationLogsWithHttpInfo(DateTimeOffset? startAt = default(DateTimeOffset?), DateTimeOffset? endAt = default(DateTimeOffset?), string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -122,7 +122,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (AccessEvaluationLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccessEvaluationLog>> GetAccessEvaluationLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<AccessEvaluationLog>> GetAccessEvaluationLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EARLY ACCESS] ListAccessEvaluationLogs: List the logs for access evaluations.
         /// </summary>
@@ -161,7 +161,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListWithHistogramOfAccessEvaluationLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListWithHistogramOfAccessEvaluationLog>> ListAccessEvaluationLogsWithHttpInfoAsync(DateTimeOffset? startAt = default(DateTimeOffset?), DateTimeOffset? endAt = default(DateTimeOffset?), string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfAccessEvaluationLog>> ListAccessEvaluationLogsWithHttpInfoAsync(DateTimeOffset? startAt = default(DateTimeOffset?), DateTimeOffset? endAt = default(DateTimeOffset?), string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

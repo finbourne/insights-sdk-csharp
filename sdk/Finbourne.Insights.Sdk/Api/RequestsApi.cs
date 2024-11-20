@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Insights.Sdk.Client;
+using IApiAccessor = Finbourne.Insights.Sdk.Client.IApiAccessor;
 using Finbourne.Insights.Sdk.Extensions;
 using Finbourne.Insights.Sdk.Client.Auth;
 using Finbourne.Insights.Sdk.Model;
@@ -52,7 +52,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Request</returns>
-        ApiResponse<Request> GetRequestWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<Request> GetRequestWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
@@ -74,7 +74,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RequestLog</returns>
-        ApiResponse<RequestLog> GetRequestLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog> GetRequestLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetResponse: Get the response for a specific API request.
         /// </summary>
@@ -96,7 +96,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> GetResponseWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<Response> GetResponseWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
@@ -126,7 +126,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListWithHistogramOfRequestLog</returns>
-        ApiResponse<ResourceListWithHistogramOfRequestLog> ListRequestLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog> ListRequestLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -162,7 +162,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Request)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Request>> GetRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<Request>> GetRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetRequestLog: Get the log for a specific API request.
         /// </summary>
@@ -189,7 +189,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RequestLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RequestLog>> GetRequestLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<RequestLog>> GetRequestLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetResponse: Get the response for a specific API request.
         /// </summary>
@@ -216,7 +216,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> GetResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<Response>> GetResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRequestLogs: Get the logs for API requests.
         /// </summary>
@@ -251,7 +251,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListWithHistogramOfRequestLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListWithHistogramOfRequestLog>> ListRequestLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfRequestLog>> ListRequestLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

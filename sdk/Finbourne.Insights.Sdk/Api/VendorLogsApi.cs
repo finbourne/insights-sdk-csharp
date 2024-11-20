@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Insights.Sdk.Client;
+using IApiAccessor = Finbourne.Insights.Sdk.Client.IApiAccessor;
 using Finbourne.Insights.Sdk.Extensions;
 using Finbourne.Insights.Sdk.Client.Auth;
 using Finbourne.Insights.Sdk.Model;
@@ -52,7 +52,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of VendorLog</returns>
-        ApiResponse<VendorLog> GetVendorLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<VendorLog> GetVendorLogWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetVendorRequest: Get the request body for a vendor request.
         /// </summary>
@@ -74,7 +74,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of VendorRequest</returns>
-        ApiResponse<VendorRequest> GetVendorRequestWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<VendorRequest> GetVendorRequestWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetVendorResponse: Get the response from a vendor request.
         /// </summary>
@@ -96,7 +96,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of VendorResponse</returns>
-        ApiResponse<VendorResponse> GetVendorResponseWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<VendorResponse> GetVendorResponseWithHttpInfo(string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListVendorLogs: List the logs for vendor requests.
         /// </summary>
@@ -126,7 +126,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListWithHistogramOfVendorLog</returns>
-        ApiResponse<ResourceListWithHistogramOfVendorLog> ListVendorLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfVendorLog> ListVendorLogsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -162,7 +162,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (VendorLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VendorLog>> GetVendorLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<VendorLog>> GetVendorLogWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetVendorRequest: Get the request body for a vendor request.
         /// </summary>
@@ -189,7 +189,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (VendorRequest)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VendorRequest>> GetVendorRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<VendorRequest>> GetVendorRequestWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetVendorResponse: Get the response from a vendor request.
         /// </summary>
@@ -216,7 +216,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (VendorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VendorResponse>> GetVendorResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<VendorResponse>> GetVendorResponseWithHttpInfoAsync(string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListVendorLogs: List the logs for vendor requests.
         /// </summary>
@@ -251,7 +251,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListWithHistogramOfVendorLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListWithHistogramOfVendorLog>> ListVendorLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListWithHistogramOfVendorLog>> ListVendorLogsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), string? histogramInterval = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
