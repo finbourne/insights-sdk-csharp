@@ -272,9 +272,9 @@ namespace Finbourne.Insights.Sdk.Model
             }
 
             // UserId (string) minLength
-            if (this.UserId != null && this.UserId.Length < 0)
+            if (this.UserId != null && this.UserId.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for UserId, length must be greater than 0.", new [] { "UserId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for UserId, length must be greater than 1.", new [] { "UserId" });
             }
 
             // Message (string) maxLength
