@@ -164,8 +164,8 @@ namespace Examples
             // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<AccessEvaluationsApi>();
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AccessEvaluationsApi>();
-            var startAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Start date from which point to fetch logs. (optional) 
-            var endAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | End date to which point to fetch logs. (optional) 
+            var startAt = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Start date from which point to fetch logs. (optional) 
+            var endAt = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | End date to which point to fetch logs. (optional) 
             var filter = "filter_example";  // string? | Expression to filter the result set. Read more about <see href=\"https://support.lusid.com/filtering-results-from-lusid\"> filtering results from LUSID</see>. (optional) 
             var sortBy = "sortBy_example";  // string? | Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional) 
             var limit = 56;  // int? | When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional) 
