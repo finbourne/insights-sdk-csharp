@@ -59,7 +59,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
@@ -78,7 +78,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
@@ -132,7 +132,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
@@ -152,7 +152,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
@@ -495,7 +495,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
@@ -515,7 +515,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
@@ -628,7 +628,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
@@ -649,7 +649,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startAt">Start date from which point to fetch logs. (optional)</param>
         /// <param name="endAt">End date to which point to fetch logs. (optional)</param>
-        /// <param name="filter">Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
         /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
