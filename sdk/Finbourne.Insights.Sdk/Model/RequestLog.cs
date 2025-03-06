@@ -46,7 +46,7 @@ namespace Finbourne.Insights.Sdk.Model
         /// <param name="user">The user who made the request. (required).</param>
         /// <param name="userType">The type of the user who made the request..</param>
         /// <param name="operation">The API operation invoked by the request..</param>
-        /// <param name="outcome">The outcome of the request: Success, Failure or Error. (required).</param>
+        /// <param name="outcome">The outcome of the request: Completed, Errored or Failed. (required).</param>
         /// <param name="duration">The duration of the request in milliseconds. (required).</param>
         /// <param name="httpStatusCode">The status code of the request. (required).</param>
         /// <param name="errorCode">Error code, if the request had a failure or error..</param>
@@ -181,9 +181,9 @@ namespace Finbourne.Insights.Sdk.Model
         public string Operation { get; set; }
 
         /// <summary>
-        /// The outcome of the request: Success, Failure or Error.
+        /// The outcome of the request: Completed, Errored or Failed.
         /// </summary>
-        /// <value>The outcome of the request: Success, Failure or Error.</value>
+        /// <value>The outcome of the request: Completed, Errored or Failed.</value>
         [DataMember(Name = "outcome", IsRequired = true, EmitDefaultValue = true)]
         public string Outcome { get; set; }
 
