@@ -29,5 +29,57 @@ Name | Type | Description | Notes
 **RequiredLicencePolicyId** | **string** | ID of the required licence policy. | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Insights.Sdk.Model;
+using System;
 
+string application = "application";
+string id = "id";
+string requestId = "example requestId";
+string sessionId = "example sessionId";
+string user = "user";
+string userType = "example userType";decimal duration = "duration";
+
+string result = "example result";
+string authoritativeRoleId = "example authoritativeRoleId";
+string authoritativePolicyId = "example authoritativePolicyId";
+string authoritativeSelector = "example authoritativeSelector";
+string resourceType = "example resourceType";
+string action = "example action";
+Dictionary<string, string> resource = new Dictionary<string, string>();
+string resourceFromEffectiveDate = "example resourceFromEffectiveDate";
+string resourceToEffectiveDate = "example resourceToEffectiveDate";
+string resourceFromAsAt = "example resourceFromAsAt";
+string resourceToAsAt = "example resourceToAsAt";
+string accessExecutionTime = "example accessExecutionTime";
+string accessAsAtTime = "example accessAsAtTime";
+string requiredLicencePolicyId = "example requiredLicencePolicyId";
+List<Link> links = new List<Link>();
+
+AccessEvaluationLog accessEvaluationLogInstance = new AccessEvaluationLog(
+    timestamp: timestamp,
+    application: application,
+    id: id,
+    requestId: requestId,
+    sessionId: sessionId,
+    user: user,
+    userType: userType,
+    duration: duration,
+    result: result,
+    authoritativeRoleId: authoritativeRoleId,
+    authoritativePolicyId: authoritativePolicyId,
+    authoritativeSelector: authoritativeSelector,
+    resourceType: resourceType,
+    action: action,
+    resource: resource,
+    resourceFromEffectiveDate: resourceFromEffectiveDate,
+    resourceToEffectiveDate: resourceToEffectiveDate,
+    resourceFromAsAt: resourceFromAsAt,
+    resourceToAsAt: resourceToAsAt,
+    accessExecutionTime: accessExecutionTime,
+    accessAsAtTime: accessAsAtTime,
+    requiredLicencePolicyId: requiredLicencePolicyId,
+    links: links);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

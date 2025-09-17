@@ -26,5 +26,50 @@ Name | Type | Description | Notes
 **ImpersonatingUser** | **string** | The impersonating user. Only present if the request is an impersonated one | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Insights.Sdk.Model;
+using System;
 
+string application = "application";
+string id = "id";
+string sessionId = "example sessionId";
+string verb = "verb";
+string url = "url";
+string domain = "example domain";
+string user = "user";
+string userType = "example userType";
+string operation = "example operation";
+string outcome = "outcome";decimal duration = "duration";
+
+string errorCode = "example errorCode";
+string sdkLanguage = "example sdkLanguage";
+string sdkVersion = "example sdkVersion";
+string sourceApplication = "example sourceApplication";
+List<string> correlationId = new List<string>();
+string impersonatingUser = "example impersonatingUser";
+List<Link> links = new List<Link>();
+
+RequestLog requestLogInstance = new RequestLog(
+    timestamp: timestamp,
+    application: application,
+    id: id,
+    sessionId: sessionId,
+    verb: verb,
+    url: url,
+    domain: domain,
+    user: user,
+    userType: userType,
+    operation: operation,
+    outcome: outcome,
+    duration: duration,
+    httpStatusCode: httpStatusCode,
+    errorCode: errorCode,
+    sdkLanguage: sdkLanguage,
+    sdkVersion: sdkVersion,
+    sourceApplication: sourceApplication,
+    correlationId: correlationId,
+    impersonatingUser: impersonatingUser,
+    links: links);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

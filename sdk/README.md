@@ -11,6 +11,9 @@ Class | Method | HTTP request | Description
 *AuditingApi* | [**CreateEntry**](docs/AuditingApi.md#createentry) | **POST** /api/auditing/entries | [EARLY ACCESS] CreateEntry: Create (persist) and audit entry..
 *AuditingApi* | [**GetProcesses**](docs/AuditingApi.md#getprocesses) | **GET** /api/auditing/processes | [EARLY ACCESS] GetProcesses: Get the latest audit entry for each process.
 *AuditingApi* | [**ListEntries**](docs/AuditingApi.md#listentries) | **GET** /api/auditing/entries | [EARLY ACCESS] ListEntries: Get the audit entries.
+*CandelaTracesApi* | [**GetTraceLog**](docs/CandelaTracesApi.md#gettracelog) | **GET** /api/candelatraces/{scope}/{traceId} | [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+*CandelaTracesApi* | [**ListTraceEventLogs**](docs/CandelaTracesApi.md#listtraceeventlogs) | **GET** /api/candelatraces/{scope}/{traceId}/events | [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+*CandelaTracesApi* | [**ListTraceLogs**](docs/CandelaTracesApi.md#listtracelogs) | **GET** /api/candelatraces | [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
 *RequestsApi* | [**GetRequest**](docs/RequestsApi.md#getrequest) | **GET** /api/requests/{id}/request | GetRequest: Get the request content for a specific API request.
 *RequestsApi* | [**GetRequestLog**](docs/RequestsApi.md#getrequestlog) | **GET** /api/requests/{id} | GetRequestLog: Get the log for a specific API request.
 *RequestsApi* | [**GetResponse**](docs/RequestsApi.md#getresponse) | **GET** /api/requests/{id}/response | GetResponse: Get the response for a specific API request.
@@ -48,11 +51,15 @@ Class | Method | HTTP request | Description
  - [Resource](docs/Resource.md)
  - [ResourceListOfAccessControlledResource](docs/ResourceListOfAccessControlledResource.md)
  - [ResourceListOfAuditProcessSummary](docs/ResourceListOfAuditProcessSummary.md)
+ - [ResourceListOfTraceEventLog](docs/ResourceListOfTraceEventLog.md)
+ - [ResourceListOfTraceLog](docs/ResourceListOfTraceLog.md)
  - [ResourceListWithHistogramOfAccessEvaluationLog](docs/ResourceListWithHistogramOfAccessEvaluationLog.md)
  - [ResourceListWithHistogramOfRequestLog](docs/ResourceListWithHistogramOfRequestLog.md)
  - [ResourceListWithHistogramOfVendorLog](docs/ResourceListWithHistogramOfVendorLog.md)
  - [Response](docs/Response.md)
  - [ScrollableCollectionOfAuditEntry](docs/ScrollableCollectionOfAuditEntry.md)
+ - [TraceEventLog](docs/TraceEventLog.md)
+ - [TraceLog](docs/TraceLog.md)
  - [VendorLog](docs/VendorLog.md)
  - [VendorRequest](docs/VendorRequest.md)
  - [VendorResponse](docs/VendorResponse.md)

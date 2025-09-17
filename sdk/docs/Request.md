@@ -14,5 +14,27 @@ Name | Type | Description | Notes
 **Url** | **string** | URL of the request | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Insights.Sdk.Model;
+using System;
 
+Dictionary<string, List<string>> headers = new Dictionary<string, List<string>>();
+string contentType = "example contentType";
+string body = "example body";
+bool bodyWasTruncated = //"True";
+string method = "example method";
+string url = "example url";
+List<Link> links = new List<Link>();
+
+Request requestInstance = new Request(
+    headers: headers,
+    contentLength: contentLength,
+    contentType: contentType,
+    body: body,
+    bodyWasTruncated: bodyWasTruncated,
+    method: method,
+    url: url,
+    links: links);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

@@ -8,5 +8,21 @@ Name | Type | Description | Notes
 **LatestEntry** | [**AuditData**](AuditData.md) |  | [optional] 
 **Summary** | [**AuditDataSummary**](AuditDataSummary.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Insights.Sdk.Model;
+using System;
 
+AuditProcess? process = new AuditProcess();
+
+AuditData? latestEntry = new AuditData();
+
+AuditDataSummary? summary = new AuditDataSummary();
+
+
+AuditProcessSummary auditProcessSummaryInstance = new AuditProcessSummary(
+    process: process,
+    latestEntry: latestEntry,
+    summary: summary);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

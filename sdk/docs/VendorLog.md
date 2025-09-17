@@ -18,5 +18,34 @@ Name | Type | Description | Notes
 **RequestId** | **string** | The ID of the request to LUSID. | 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Insights.Sdk.Model;
+using System;
 
+string id = "id";
+string provider = "provider";
+string type = "type";
+string destinationUrl = "destinationUrl";
+string operation = "operation";
+string outcome = "outcome";decimal duration = "duration";
+
+string userId = "userId";
+string requestId = "requestId";
+List<Link> links = new List<Link>();
+
+VendorLog vendorLogInstance = new VendorLog(
+    id: id,
+    provider: provider,
+    timestamp: timestamp,
+    type: type,
+    destinationUrl: destinationUrl,
+    operation: operation,
+    outcome: outcome,
+    duration: duration,
+    httpStatusCode: httpStatusCode,
+    userId: userId,
+    requestId: requestId,
+    links: links);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

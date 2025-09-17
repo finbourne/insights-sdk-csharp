@@ -1,36 +1,31 @@
-# Finbourne.Insights.Sdk.Model.ResourceListWithHistogramOfRequestLog
-ResourceList with additional aggregation data about the values.
+# Finbourne.Insights.Sdk.Model.ResourceListOfTraceEventLog
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Histogram** | [**Histogram**](Histogram.md) |  | [optional] 
-**Values** | [**List&lt;RequestLog&gt;**](RequestLog.md) |  | 
+**Values** | [**List&lt;TraceEventLog&gt;**](TraceEventLog.md) |  | 
 **Href** | **string** |  | [optional] 
+**Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 **NextPage** | **string** |  | [optional] 
 **PreviousPage** | **string** |  | [optional] 
-**Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
 ```csharp
 using Finbourne.Insights.Sdk.Model;
 using System;
 
-Histogram? histogram = new Histogram();
-
-List<RequestLog> values = new List<RequestLog>();
+List<TraceEventLog> values = new List<TraceEventLog>();
 string href = "example href";
+List<Link> links = new List<Link>();
 string nextPage = "example nextPage";
 string previousPage = "example previousPage";
-List<Link> links = new List<Link>();
 
-ResourceListWithHistogramOfRequestLog resourceListWithHistogramOfRequestLogInstance = new ResourceListWithHistogramOfRequestLog(
-    histogram: histogram,
+ResourceListOfTraceEventLog resourceListOfTraceEventLogInstance = new ResourceListOfTraceEventLog(
     values: values,
     href: href,
+    links: links,
     nextPage: nextPage,
-    previousPage: previousPage,
-    links: links);
+    previousPage: previousPage);
 ```
 
 [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
