@@ -4,14 +4,14 @@ All URIs are relative to *https://fbn-prd.lusid.com/insights*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetAccessEvaluationLog**](AccessEvaluationsApi.md#getaccessevaluationlog) | **GET** /api/access/{id} | [EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation.  This endpoint will be deprecated in the near future. |
+| [**GetAccessEvaluationLog**](AccessEvaluationsApi.md#getaccessevaluationlog) | **GET** /api/access/{id} | [EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation. This endpoint will be deprecated in the near future. |
 | [**ListAccessEvaluationLogs**](AccessEvaluationsApi.md#listaccessevaluationlogs) | **GET** /api/access | [EARLY ACCESS] ListAccessEvaluationLogs: List the logs for access evaluations. |
 
 <a id="getaccessevaluationlog"></a>
 # **GetAccessEvaluationLog**
 > AccessEvaluationLog GetAccessEvaluationLog (string id)
 
-[EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation.  This endpoint will be deprecated in the near future.
+[EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation. This endpoint will be deprecated in the near future.
 
 ### Example
 ```csharp
@@ -59,7 +59,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // AccessEvaluationLog result = apiInstance.GetAccessEvaluationLog(id, opts: opts);
 
-                // [EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation.  This endpoint will be deprecated in the near future.
+                // [EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation. This endpoint will be deprecated in the near future.
                 AccessEvaluationLog result = apiInstance.GetAccessEvaluationLog(id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -80,7 +80,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation.  This endpoint will be deprecated in the near future.
+    // [EARLY ACCESS] GetAccessEvaluationLog: Get the log for a specific access evaluation. This endpoint will be deprecated in the near future.
     ApiResponse<AccessEvaluationLog> response = apiInstance.GetAccessEvaluationLogWithHttpInfo(id);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -166,7 +166,7 @@ namespace Examples
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<AccessEvaluationsApi>();
             var startAt = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Start date from which point to fetch logs. (optional) 
             var endAt = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | End date to which point to fetch logs. (optional) 
-            var filter = "filter_example";  // string? | Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional) 
+            var filter = "filter_example";  // string? | Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional) 
             var sortBy = "sortBy_example";  // string? | Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional) 
             var limit = 56;  // int? | When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional) 
             var page = "page_example";  // string? | Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional) 
@@ -218,7 +218,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **startAt** | **DateTimeOffset?** | Start date from which point to fetch logs. | [optional]  |
 | **endAt** | **DateTimeOffset?** | End date to which point to fetch logs. | [optional]  |
-| **filter** | **string?** | Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). | [optional]  |
+| **filter** | **string?** | Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). | [optional]  |
 | **sortBy** | **string?** | Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName | [optional]  |
 | **limit** | **int?** | When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. | [optional]  |
 | **page** | **string?** | Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. | [optional]  |

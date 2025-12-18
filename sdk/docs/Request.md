@@ -6,7 +6,7 @@ DTO of Finbourne.AspNetCore.Http.TrackingEntry.RequestInformation.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Headers** | **Dictionary&lt;string, List&lt;string&gt;&gt;** | The headers | [optional] 
-**ContentLength** | **long?** | The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Request.Body  (e.g. if actual Body is large, or not convertible to a string) | [optional] 
+**ContentLength** | **long?** | The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Request.Body (e.g. if actual Body is large, or not convertible to a string) | [optional] 
 **ContentType** | **string** | The content type | [optional] 
 **Body** | **string** | The recorded content. | [optional] 
 **BodyWasTruncated** | **bool** | Determines if the recorded body was truncated. | [optional] 

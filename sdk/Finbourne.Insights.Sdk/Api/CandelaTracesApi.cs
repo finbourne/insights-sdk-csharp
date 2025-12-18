@@ -32,15 +32,36 @@ namespace Finbourne.Insights.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// </summary>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the trace.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>TraceDiagramResponse</returns>
+        TraceDiagramResponse GetTraceDiagram(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the trace.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of TraceDiagramResponse</returns>
+        Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse> GetTraceDiagramWithHttpInfo(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
+        /// <summary>
         /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>TraceLog</returns>
-        TraceLog GetTraceLog(string traceId, string scope, int operationIndex = 0, ConfigurationOptions? opts = null);
+        TraceLog GetTraceLog(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
@@ -50,22 +71,20 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of TraceLog</returns>
-        Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> GetTraceLogWithHttpInfo(string traceId, string scope, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> GetTraceLogWithHttpInfo(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfTraceEventLog</returns>
-        ResourceListOfTraceEventLog ListTraceEventLogs(string traceId, string scope, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ResourceListOfTraceEventLog ListTraceEventLogs(string traceId, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
@@ -75,20 +94,19 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfTraceEventLog</returns>
-        Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> ListTraceEventLogsWithHttpInfo(string traceId, string scope, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> ListTraceEventLogsWithHttpInfo(string traceId, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfTraceLog</returns>
@@ -101,10 +119,10 @@ namespace Finbourne.Insights.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfTraceLog</returns>
@@ -119,6 +137,33 @@ namespace Finbourne.Insights.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the trace.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of TraceDiagramResponse</returns>
+        System.Threading.Tasks.Task<TraceDiagramResponse> GetTraceDiagramAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the trace.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (TraceDiagramResponse)</returns>
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse>> GetTraceDiagramWithHttpInfoAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        /// <summary>
         /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
         /// </summary>
         /// <remarks>
@@ -126,12 +171,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of TraceLog</returns>
-        System.Threading.Tasks.Task<TraceLog> GetTraceLogAsync(string traceId, string scope, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<TraceLog> GetTraceLogAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
@@ -141,12 +185,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (TraceLog)</returns>
-        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog>> GetTraceLogWithHttpInfoAsync(string traceId, string scope, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog>> GetTraceLogWithHttpInfoAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
         /// </summary>
@@ -155,13 +198,12 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfTraceEventLog</returns>
-        System.Threading.Tasks.Task<ResourceListOfTraceEventLog> ListTraceEventLogsAsync(string traceId, string scope, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ResourceListOfTraceEventLog> ListTraceEventLogsAsync(string traceId, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
@@ -171,13 +213,12 @@ namespace Finbourne.Insights.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfTraceEventLog)</returns>
-        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog>> ListTraceEventLogsWithHttpInfoAsync(string traceId, string scope, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog>> ListTraceEventLogsWithHttpInfoAsync(string traceId, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
         /// </summary>
@@ -185,10 +226,10 @@ namespace Finbourne.Insights.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -202,10 +243,10 @@ namespace Finbourne.Insights.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -335,41 +376,33 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
+        /// <param name="traceId">The identifier of the trace.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
-        /// <returns>TraceLog</returns>
-        public TraceLog GetTraceLog(string traceId, string scope, int operationIndex = 0, ConfigurationOptions? opts = null)
+        /// <returns>TraceDiagramResponse</returns>
+        public TraceDiagramResponse GetTraceDiagram(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> localVarResponse = GetTraceLogWithHttpInfo(traceId, scope, opts: opts);
+            Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse> localVarResponse = GetTraceDiagramWithHttpInfo(traceId, opts: opts);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
+        /// <param name="traceId">The identifier of the trace.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
-        /// <returns>ApiResponse of TraceLog</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> GetTraceLogWithHttpInfo(string traceId, string scope, int operationIndex = 0, ConfigurationOptions? opts = null)
+        /// <returns>ApiResponse of TraceDiagramResponse</returns>
+        public Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse> GetTraceDiagramWithHttpInfo(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'traceId' is set
             if (traceId == null)
             {
-                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'traceId' when calling CandelaTracesApi->GetTraceLog");
-            }
-
-            // verify the required parameter 'scope' is set
-            if (scope == null)
-            {
-                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'scope' when calling CandelaTracesApi->GetTraceLog");
+                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'traceId' when calling CandelaTracesApi->GetTraceDiagram");
             }
 
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
@@ -407,7 +440,210 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("traceId", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(traceId)); // path parameter
-            localVarRequestOptions.PathParameters.Add("scope", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(scope)); // path parameter
+
+            localVarRequestOptions.Operation = "CandelaTracesApi.GetTraceDiagram";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<TraceDiagramResponse>("/api/candelatraces/{traceId}/diagram", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetTraceDiagram", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
+        /// </summary>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the trace.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of TraceDiagramResponse</returns>
+        public async System.Threading.Tasks.Task<TraceDiagramResponse> GetTraceDiagramAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse> localVarResponse = await GetTraceDiagramWithHttpInfoAsync(traceId, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
+        /// </summary>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the trace.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>Task of ApiResponse (TraceDiagramResponse)</returns>
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse>> GetTraceDiagramWithHttpInfoAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'traceId' is set
+            if (traceId == null)
+            {
+                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'traceId' when calling CandelaTracesApi->GetTraceDiagram");
+            }
+
+
+            Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Finbourne.Insights.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Insights.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("traceId", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(traceId)); // path parameter
+
+            localVarRequestOptions.Operation = "CandelaTracesApi.GetTraceDiagram";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TraceDiagramResponse>("/api/candelatraces/{traceId}/diagram", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetTraceDiagram", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// </summary>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the request to obtain the log for.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>TraceLog</returns>
+        public TraceLog GetTraceLog(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> localVarResponse = GetTraceLogWithHttpInfo(traceId, opts: opts);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// </summary>
+        /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="traceId">The identifier of the request to obtain the log for.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
+        /// <returns>ApiResponse of TraceLog</returns>
+        public Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> GetTraceLogWithHttpInfo(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null)
+        {
+            // verify the required parameter 'traceId' is set
+            if (traceId == null)
+            {
+                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'traceId' when calling CandelaTracesApi->GetTraceLog");
+            }
+
+            Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Finbourne.Insights.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Finbourne.Insights.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("traceId", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(traceId)); // path parameter
 
             localVarRequestOptions.Operation = "CandelaTracesApi.GetTraceLog";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -430,7 +666,7 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<TraceLog>("/api/candelatraces/{scope}/{traceId}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<TraceLog>("/api/candelatraces/{traceId}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetTraceLog", localVarResponse);
@@ -448,14 +684,13 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of TraceLog</returns>
-        public async System.Threading.Tasks.Task<TraceLog> GetTraceLogAsync(string traceId, string scope, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<TraceLog> GetTraceLogAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> localVarResponse = await GetTraceLogWithHttpInfoAsync(traceId, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> localVarResponse = await GetTraceLogWithHttpInfoAsync(traceId, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -464,23 +699,16 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (TraceLog)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog>> GetTraceLogWithHttpInfoAsync(string traceId, string scope, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog>> GetTraceLogWithHttpInfoAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'traceId' is set
             if (traceId == null)
             {
                 throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'traceId' when calling CandelaTracesApi->GetTraceLog");
-            }
-
-            // verify the required parameter 'scope' is set
-            if (scope == null)
-            {
-                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'scope' when calling CandelaTracesApi->GetTraceLog");
             }
 
 
@@ -519,7 +747,6 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("traceId", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(traceId)); // path parameter
-            localVarRequestOptions.PathParameters.Add("scope", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(scope)); // path parameter
 
             localVarRequestOptions.Operation = "CandelaTracesApi.GetTraceLog";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -542,7 +769,7 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<TraceLog>("/api/candelatraces/{scope}/{traceId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TraceLog>("/api/candelatraces/{traceId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -561,14 +788,13 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfTraceEventLog</returns>
-        public ResourceListOfTraceEventLog ListTraceEventLogs(string traceId, string scope, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public ResourceListOfTraceEventLog ListTraceEventLogs(string traceId, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> localVarResponse = ListTraceEventLogsWithHttpInfo(traceId, scope, page, opts: opts);
+            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> localVarResponse = ListTraceEventLogsWithHttpInfo(traceId, page, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -577,12 +803,11 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfTraceEventLog</returns>
-        public Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> ListTraceEventLogsWithHttpInfo(string traceId, string scope, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> ListTraceEventLogsWithHttpInfo(string traceId, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'traceId' is set
             if (traceId == null)
@@ -590,12 +815,6 @@ namespace Finbourne.Insights.Sdk.Api
                 throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'traceId' when calling CandelaTracesApi->ListTraceEventLogs");
             }
 
-            // verify the required parameter 'scope' is set
-            if (scope == null)
-            {
-                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'scope' when calling CandelaTracesApi->ListTraceEventLogs");
-            }
-
             Finbourne.Insights.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Insights.Sdk.Client.RequestOptions();
 
             if (opts is { TimeoutMs: not null })
@@ -631,9 +850,9 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("traceId", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(traceId)); // path parameter
-            localVarRequestOptions.PathParameters.Add("scope", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(scope)); // path parameter
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
 
@@ -658,7 +877,7 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ResourceListOfTraceEventLog>("/api/candelatraces/{scope}/{traceId}/events", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ResourceListOfTraceEventLog>("/api/candelatraces/{traceId}/events", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTraceEventLogs", localVarResponse);
@@ -676,15 +895,14 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfTraceEventLog</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfTraceEventLog> ListTraceEventLogsAsync(string traceId, string scope, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<ResourceListOfTraceEventLog> ListTraceEventLogsAsync(string traceId, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> localVarResponse = await ListTraceEventLogsWithHttpInfoAsync(traceId, scope, page, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> localVarResponse = await ListTraceEventLogsWithHttpInfoAsync(traceId, page, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -693,24 +911,17 @@ namespace Finbourne.Insights.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
-        /// <param name="scope"></param>
         /// <param name="page"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfTraceEventLog)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog>> ListTraceEventLogsWithHttpInfoAsync(string traceId, string scope, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog>> ListTraceEventLogsWithHttpInfoAsync(string traceId, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'traceId' is set
             if (traceId == null)
             {
                 throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'traceId' when calling CandelaTracesApi->ListTraceEventLogs");
-            }
-
-            // verify the required parameter 'scope' is set
-            if (scope == null)
-            {
-                throw new Finbourne.Insights.Sdk.Client.ApiException(400, "Missing required parameter 'scope' when calling CandelaTracesApi->ListTraceEventLogs");
             }
 
 
@@ -749,7 +960,6 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("traceId", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(traceId)); // path parameter
-            localVarRequestOptions.PathParameters.Add("scope", Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToString(scope)); // path parameter
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
@@ -776,7 +986,7 @@ namespace Finbourne.Insights.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ResourceListOfTraceEventLog>("/api/candelatraces/{scope}/{traceId}/events", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ResourceListOfTraceEventLog>("/api/candelatraces/{traceId}/events", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -794,10 +1004,10 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfTraceLog</returns>
@@ -811,10 +1021,10 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfTraceLog</returns>
@@ -856,18 +1066,22 @@ namespace Finbourne.Insights.Sdk.Api
 
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
 
@@ -909,10 +1123,10 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -927,10 +1141,10 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Expression to filter the result set. Read more about [ filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
+        /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
         /// <param name="sortBy">Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName (optional)</param>
         /// <param name="limit">When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. (optional)</param>
-        /// <param name="page">Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
+        /// <param name="page">Encoded pagwwwwe string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>

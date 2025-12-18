@@ -40,13 +40,14 @@ namespace Finbourne.Insights.Sdk.Model
         /// <param name="traceId">The identifier of the parent trace. (required).</param>
         /// <param name="createdAt">The datetime at which the trace event was created. (required).</param>
         /// <param name="eventType">The type of the trace event. (required).</param>
+        /// <param name="origin">Whether the event originated from the AI or the user (required).</param>
         /// <param name="content">The content of the trace event. (required).</param>
-        /// <param name="sessionId">The session ID of the trace event. (required).</param>
-        /// <param name="circuitId">The ID of the circuit in which the trace event occurred. (required).</param>
-        /// <param name="circuitVersion">The version of the circuit in which the trace event occurred. (required).</param>
+        /// <param name="agentScope">The scope of the agent currently being interacted with (required).</param>
+        /// <param name="agentCode">The code identifier of the agent currently being interacted with (required).</param>
+        /// <param name="agentVersion">The version of the circuit in which the trace event occurred. (required).</param>
         /// <param name="nodeId">The ID of the circuit&#39;s node at which the trace event occured. (required).</param>
         /// <param name="links">links.</param>
-        public TraceEventLog(string traceEventId = default(string), string traceId = default(string), DateTimeOffset createdAt = default(DateTimeOffset), string eventType = default(string), string content = default(string), string sessionId = default(string), string circuitId = default(string), string circuitVersion = default(string), string nodeId = default(string), List<Link> links = default(List<Link>))
+        public TraceEventLog(string traceEventId = default(string), string traceId = default(string), DateTimeOffset createdAt = default(DateTimeOffset), string eventType = default(string), string origin = default(string), string content = default(string), string agentScope = default(string), string agentCode = default(string), int agentVersion = default(int), string nodeId = default(string), List<Link> links = default(List<Link>))
         {
             // to ensure "traceEventId" is required (not null)
             if (traceEventId == null)
@@ -67,30 +68,31 @@ namespace Finbourne.Insights.Sdk.Model
                 throw new ArgumentNullException("eventType is a required property for TraceEventLog and cannot be null");
             }
             this.EventType = eventType;
+            // to ensure "origin" is required (not null)
+            if (origin == null)
+            {
+                throw new ArgumentNullException("origin is a required property for TraceEventLog and cannot be null");
+            }
+            this.Origin = origin;
             // to ensure "content" is required (not null)
             if (content == null)
             {
                 throw new ArgumentNullException("content is a required property for TraceEventLog and cannot be null");
             }
             this.Content = content;
-            // to ensure "sessionId" is required (not null)
-            if (sessionId == null)
+            // to ensure "agentScope" is required (not null)
+            if (agentScope == null)
             {
-                throw new ArgumentNullException("sessionId is a required property for TraceEventLog and cannot be null");
+                throw new ArgumentNullException("agentScope is a required property for TraceEventLog and cannot be null");
             }
-            this.SessionId = sessionId;
-            // to ensure "circuitId" is required (not null)
-            if (circuitId == null)
+            this.AgentScope = agentScope;
+            // to ensure "agentCode" is required (not null)
+            if (agentCode == null)
             {
-                throw new ArgumentNullException("circuitId is a required property for TraceEventLog and cannot be null");
+                throw new ArgumentNullException("agentCode is a required property for TraceEventLog and cannot be null");
             }
-            this.CircuitId = circuitId;
-            // to ensure "circuitVersion" is required (not null)
-            if (circuitVersion == null)
-            {
-                throw new ArgumentNullException("circuitVersion is a required property for TraceEventLog and cannot be null");
-            }
-            this.CircuitVersion = circuitVersion;
+            this.AgentCode = agentCode;
+            this.AgentVersion = agentVersion;
             // to ensure "nodeId" is required (not null)
             if (nodeId == null)
             {
@@ -129,6 +131,13 @@ namespace Finbourne.Insights.Sdk.Model
         public string EventType { get; set; }
 
         /// <summary>
+        /// Whether the event originated from the AI or the user
+        /// </summary>
+        /// <value>Whether the event originated from the AI or the user</value>
+        [DataMember(Name = "origin", IsRequired = true, EmitDefaultValue = true)]
+        public string Origin { get; set; }
+
+        /// <summary>
         /// The content of the trace event.
         /// </summary>
         /// <value>The content of the trace event.</value>
@@ -136,25 +145,25 @@ namespace Finbourne.Insights.Sdk.Model
         public string Content { get; set; }
 
         /// <summary>
-        /// The session ID of the trace event.
+        /// The scope of the agent currently being interacted with
         /// </summary>
-        /// <value>The session ID of the trace event.</value>
-        [DataMember(Name = "sessionId", IsRequired = true, EmitDefaultValue = true)]
-        public string SessionId { get; set; }
+        /// <value>The scope of the agent currently being interacted with</value>
+        [DataMember(Name = "agentScope", IsRequired = true, EmitDefaultValue = true)]
+        public string AgentScope { get; set; }
 
         /// <summary>
-        /// The ID of the circuit in which the trace event occurred.
+        /// The code identifier of the agent currently being interacted with
         /// </summary>
-        /// <value>The ID of the circuit in which the trace event occurred.</value>
-        [DataMember(Name = "circuitId", IsRequired = true, EmitDefaultValue = true)]
-        public string CircuitId { get; set; }
+        /// <value>The code identifier of the agent currently being interacted with</value>
+        [DataMember(Name = "agentCode", IsRequired = true, EmitDefaultValue = true)]
+        public string AgentCode { get; set; }
 
         /// <summary>
         /// The version of the circuit in which the trace event occurred.
         /// </summary>
         /// <value>The version of the circuit in which the trace event occurred.</value>
-        [DataMember(Name = "circuitVersion", IsRequired = true, EmitDefaultValue = true)]
-        public string CircuitVersion { get; set; }
+        [DataMember(Name = "agentVersion", IsRequired = true, EmitDefaultValue = true)]
+        public int AgentVersion { get; set; }
 
         /// <summary>
         /// The ID of the circuit&#39;s node at which the trace event occured.
@@ -181,10 +190,11 @@ namespace Finbourne.Insights.Sdk.Model
             sb.Append("  TraceId: ").Append(TraceId).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
+            sb.Append("  Origin: ").Append(Origin).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
-            sb.Append("  SessionId: ").Append(SessionId).Append("\n");
-            sb.Append("  CircuitId: ").Append(CircuitId).Append("\n");
-            sb.Append("  CircuitVersion: ").Append(CircuitVersion).Append("\n");
+            sb.Append("  AgentScope: ").Append(AgentScope).Append("\n");
+            sb.Append("  AgentCode: ").Append(AgentCode).Append("\n");
+            sb.Append("  AgentVersion: ").Append(AgentVersion).Append("\n");
             sb.Append("  NodeId: ").Append(NodeId).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
@@ -243,24 +253,28 @@ namespace Finbourne.Insights.Sdk.Model
                     this.EventType.Equals(input.EventType))
                 ) && 
                 (
+                    this.Origin == input.Origin ||
+                    (this.Origin != null &&
+                    this.Origin.Equals(input.Origin))
+                ) && 
+                (
                     this.Content == input.Content ||
                     (this.Content != null &&
                     this.Content.Equals(input.Content))
                 ) && 
                 (
-                    this.SessionId == input.SessionId ||
-                    (this.SessionId != null &&
-                    this.SessionId.Equals(input.SessionId))
+                    this.AgentScope == input.AgentScope ||
+                    (this.AgentScope != null &&
+                    this.AgentScope.Equals(input.AgentScope))
                 ) && 
                 (
-                    this.CircuitId == input.CircuitId ||
-                    (this.CircuitId != null &&
-                    this.CircuitId.Equals(input.CircuitId))
+                    this.AgentCode == input.AgentCode ||
+                    (this.AgentCode != null &&
+                    this.AgentCode.Equals(input.AgentCode))
                 ) && 
                 (
-                    this.CircuitVersion == input.CircuitVersion ||
-                    (this.CircuitVersion != null &&
-                    this.CircuitVersion.Equals(input.CircuitVersion))
+                    this.AgentVersion == input.AgentVersion ||
+                    this.AgentVersion.Equals(input.AgentVersion)
                 ) && 
                 (
                     this.NodeId == input.NodeId ||
@@ -300,22 +314,23 @@ namespace Finbourne.Insights.Sdk.Model
                 {
                     hashCode = (hashCode * 59) + this.EventType.GetHashCode();
                 }
+                if (this.Origin != null)
+                {
+                    hashCode = (hashCode * 59) + this.Origin.GetHashCode();
+                }
                 if (this.Content != null)
                 {
                     hashCode = (hashCode * 59) + this.Content.GetHashCode();
                 }
-                if (this.SessionId != null)
+                if (this.AgentScope != null)
                 {
-                    hashCode = (hashCode * 59) + this.SessionId.GetHashCode();
+                    hashCode = (hashCode * 59) + this.AgentScope.GetHashCode();
                 }
-                if (this.CircuitId != null)
+                if (this.AgentCode != null)
                 {
-                    hashCode = (hashCode * 59) + this.CircuitId.GetHashCode();
+                    hashCode = (hashCode * 59) + this.AgentCode.GetHashCode();
                 }
-                if (this.CircuitVersion != null)
-                {
-                    hashCode = (hashCode * 59) + this.CircuitVersion.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.AgentVersion.GetHashCode();
                 if (this.NodeId != null)
                 {
                     hashCode = (hashCode * 59) + this.NodeId.GetHashCode();
@@ -353,28 +368,28 @@ namespace Finbourne.Insights.Sdk.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EventType, length must be greater than 1.", new [] { "EventType" });
             }
 
+            // Origin (string) minLength
+            if (this.Origin != null && this.Origin.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Origin, length must be greater than 1.", new [] { "Origin" });
+            }
+
             // Content (string) minLength
             if (this.Content != null && this.Content.Length < 1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Content, length must be greater than 1.", new [] { "Content" });
             }
 
-            // SessionId (string) minLength
-            if (this.SessionId != null && this.SessionId.Length < 1)
+            // AgentScope (string) minLength
+            if (this.AgentScope != null && this.AgentScope.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SessionId, length must be greater than 1.", new [] { "SessionId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AgentScope, length must be greater than 1.", new [] { "AgentScope" });
             }
 
-            // CircuitId (string) minLength
-            if (this.CircuitId != null && this.CircuitId.Length < 1)
+            // AgentCode (string) minLength
+            if (this.AgentCode != null && this.AgentCode.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CircuitId, length must be greater than 1.", new [] { "CircuitId" });
-            }
-
-            // CircuitVersion (string) minLength
-            if (this.CircuitVersion != null && this.CircuitVersion.Length < 1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CircuitVersion, length must be greater than 1.", new [] { "CircuitVersion" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AgentCode, length must be greater than 1.", new [] { "AgentCode" });
             }
 
             // NodeId (string) minLength

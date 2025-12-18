@@ -762,18 +762,22 @@ namespace Finbourne.Insights.Sdk.Api
 
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
             }
             if (size != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "size", size));
             }
             if (state != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Insights.Sdk.Client.ClientUtils.ParameterToMultiMap("", "state", state));
             }
 

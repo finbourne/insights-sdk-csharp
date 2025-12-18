@@ -37,12 +37,11 @@ namespace Finbourne.Insights.Sdk.Model
         /// Initializes a new instance of the <see cref="TraceLog" /> class.
         /// </summary>
         /// <param name="traceId">The identifier of the trace. (required).</param>
-        /// <param name="scope">The scope of the trace. (required).</param>
         /// <param name="createdAt">The datetime at which the trace was created. (required).</param>
         /// <param name="userId">The id of the user who created the trace. (required).</param>
         /// <param name="description">The description of the trace..</param>
         /// <param name="links">links.</param>
-        public TraceLog(string traceId = default(string), string scope = default(string), DateTimeOffset createdAt = default(DateTimeOffset), string userId = default(string), string description = default(string), List<Link> links = default(List<Link>))
+        public TraceLog(string traceId = default(string), DateTimeOffset createdAt = default(DateTimeOffset), string userId = default(string), string description = default(string), List<Link> links = default(List<Link>))
         {
             // to ensure "traceId" is required (not null)
             if (traceId == null)
@@ -50,12 +49,6 @@ namespace Finbourne.Insights.Sdk.Model
                 throw new ArgumentNullException("traceId is a required property for TraceLog and cannot be null");
             }
             this.TraceId = traceId;
-            // to ensure "scope" is required (not null)
-            if (scope == null)
-            {
-                throw new ArgumentNullException("scope is a required property for TraceLog and cannot be null");
-            }
-            this.Scope = scope;
             this.CreatedAt = createdAt;
             // to ensure "userId" is required (not null)
             if (userId == null)
@@ -73,13 +66,6 @@ namespace Finbourne.Insights.Sdk.Model
         /// <value>The identifier of the trace.</value>
         [DataMember(Name = "traceId", IsRequired = true, EmitDefaultValue = true)]
         public string TraceId { get; set; }
-
-        /// <summary>
-        /// The scope of the trace.
-        /// </summary>
-        /// <value>The scope of the trace.</value>
-        [DataMember(Name = "scope", IsRequired = true, EmitDefaultValue = true)]
-        public string Scope { get; set; }
 
         /// <summary>
         /// The datetime at which the trace was created.
@@ -117,7 +103,6 @@ namespace Finbourne.Insights.Sdk.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class TraceLog {\n");
             sb.Append("  TraceId: ").Append(TraceId).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -163,11 +148,6 @@ namespace Finbourne.Insights.Sdk.Model
                     this.TraceId.Equals(input.TraceId))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
-                ) && 
-                (
                     this.CreatedAt == input.CreatedAt ||
                     (this.CreatedAt != null &&
                     this.CreatedAt.Equals(input.CreatedAt))
@@ -203,10 +183,6 @@ namespace Finbourne.Insights.Sdk.Model
                 {
                     hashCode = (hashCode * 59) + this.TraceId.GetHashCode();
                 }
-                if (this.Scope != null)
-                {
-                    hashCode = (hashCode * 59) + this.Scope.GetHashCode();
-                }
                 if (this.CreatedAt != null)
                 {
                     hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
@@ -238,12 +214,6 @@ namespace Finbourne.Insights.Sdk.Model
             if (this.TraceId != null && this.TraceId.Length < 1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TraceId, length must be greater than 1.", new [] { "TraceId" });
-            }
-
-            // Scope (string) minLength
-            if (this.Scope != null && this.Scope.Length < 1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Scope, length must be greater than 1.", new [] { "Scope" });
             }
 
             // UserId (string) minLength

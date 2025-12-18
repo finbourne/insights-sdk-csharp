@@ -32,7 +32,7 @@ namespace Finbourne.Insights.Sdk.Model
         /// Initializes a new instance of the <see cref="Response" /> class.
         /// </summary>
         /// <param name="headers">The headers.</param>
-        /// <param name="contentLength">The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Response.Body  (e.g. if actual Body is large, or not convertible to a string).</param>
+        /// <param name="contentLength">The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Response.Body (e.g. if actual Body is large, or not convertible to a string).</param>
         /// <param name="contentType">The content type.</param>
         /// <param name="body">The recorded content..</param>
         /// <param name="bodyWasTruncated">Determines if the recorded body was truncated..</param>
@@ -57,9 +57,9 @@ namespace Finbourne.Insights.Sdk.Model
         public Dictionary<string, List<string>> Headers { get; set; }
 
         /// <summary>
-        /// The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Response.Body  (e.g. if actual Body is large, or not convertible to a string)
+        /// The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Response.Body (e.g. if actual Body is large, or not convertible to a string)
         /// </summary>
-        /// <value>The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Response.Body  (e.g. if actual Body is large, or not convertible to a string)</value>
+        /// <value>The actual length of the body, which may be larger than the data recorded in Finbourne.Insights.WebApi.Dtos.Response.Body (e.g. if actual Body is large, or not convertible to a string)</value>
         [DataMember(Name = "contentLength", EmitDefaultValue = true)]
         public long? ContentLength { get; set; }
 
