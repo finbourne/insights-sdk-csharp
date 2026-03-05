@@ -32,7 +32,7 @@ namespace Finbourne.Insights.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the trace.</param>
@@ -42,7 +42,7 @@ namespace Finbourne.Insights.Sdk.Api
         TraceDiagramResponse GetTraceDiagram(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -54,7 +54,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>ApiResponse of TraceDiagramResponse</returns>
         Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse> GetTraceDiagramWithHttpInfo(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -64,7 +64,7 @@ namespace Finbourne.Insights.Sdk.Api
         TraceLog GetTraceLog(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -76,7 +76,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>ApiResponse of TraceLog</returns>
         Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog> GetTraceLogWithHttpInfo(string traceId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -87,7 +87,7 @@ namespace Finbourne.Insights.Sdk.Api
         ResourceListOfTraceEventLog ListTraceEventLogs(string traceId, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -100,7 +100,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfTraceEventLog</returns>
         Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog> ListTraceEventLogsWithHttpInfo(string traceId, string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
@@ -113,7 +113,7 @@ namespace Finbourne.Insights.Sdk.Api
         ResourceListOfTraceLog ListTraceLogs(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces.
         /// </summary>
         /// <remarks>
         /// 
@@ -137,7 +137,7 @@ namespace Finbourne.Insights.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -151,7 +151,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<TraceDiagramResponse> GetTraceDiagramAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -164,7 +164,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>Task of ApiResponse (TraceDiagramResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceDiagramResponse>> GetTraceDiagramWithHttpInfoAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -178,7 +178,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<TraceLog> GetTraceLogAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -191,7 +191,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>Task of ApiResponse (TraceLog)</returns>
         System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<TraceLog>> GetTraceLogWithHttpInfoAsync(string traceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -206,7 +206,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfTraceEventLog> ListTraceEventLogsAsync(string traceId, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
         /// </summary>
         /// <remarks>
         /// 
@@ -220,7 +220,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfTraceEventLog)</returns>
         System.Threading.Tasks.Task<Finbourne.Insights.Sdk.Client.ApiResponse<ResourceListOfTraceEventLog>> ListTraceEventLogsWithHttpInfoAsync(string traceId, string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces.
         /// </summary>
         /// <remarks>
         /// 
@@ -237,7 +237,7 @@ namespace Finbourne.Insights.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfTraceLog> ListTraceLogsAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces.
         /// </summary>
         /// <remarks>
         /// 
@@ -376,7 +376,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the trace.</param>
@@ -390,7 +390,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the trace.</param>
@@ -476,7 +476,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the trace.</param>
@@ -491,7 +491,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. 
+        /// [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the trace.</param>
@@ -580,7 +580,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -594,7 +594,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -680,7 +680,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -695,7 +695,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. 
+        /// [EARLY ACCESS] GetTraceLog: Get the log for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -784,7 +784,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace. 
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -799,7 +799,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace. 
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -891,7 +891,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace. 
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -907,7 +907,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace. 
+        /// [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="traceId">The identifier of the request to obtain the log for.</param>
@@ -1001,7 +1001,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
@@ -1018,7 +1018,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
@@ -1120,7 +1120,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>
@@ -1138,7 +1138,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. 
+        /// [EARLY ACCESS] ListTraceLogs: Get the logs for traces. 
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Expression to filter the result set. Read more about [filtering results from LUSID](https://support.lusid.com/filtering-results-from-lusid). (optional)</param>

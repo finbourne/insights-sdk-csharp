@@ -4,16 +4,16 @@ All URIs are relative to *https://fbn-prd.lusid.com/insights*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetTraceDiagram**](CandelaTracesApi.md#gettracediagram) | **GET** /api/candelatraces/{traceId}/diagram | [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace. |
-| [**GetTraceLog**](CandelaTracesApi.md#gettracelog) | **GET** /api/candelatraces/{traceId} | [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace. |
-| [**ListTraceEventLogs**](CandelaTracesApi.md#listtraceeventlogs) | **GET** /api/candelatraces/{traceId}/events | [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace. |
-| [**ListTraceLogs**](CandelaTracesApi.md#listtracelogs) | **GET** /api/candelatraces | [EXPERIMENTAL] ListTraceLogs: Get the logs for traces. |
+| [**GetTraceDiagram**](CandelaTracesApi.md#gettracediagram) | **GET** /api/candelatraces/{traceId}/diagram | [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace. |
+| [**GetTraceLog**](CandelaTracesApi.md#gettracelog) | **GET** /api/candelatraces/{traceId} | [EARLY ACCESS] GetTraceLog: Get the log for a specific trace. |
+| [**ListTraceEventLogs**](CandelaTracesApi.md#listtraceeventlogs) | **GET** /api/candelatraces/{traceId}/events | [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace. |
+| [**ListTraceLogs**](CandelaTracesApi.md#listtracelogs) | **GET** /api/candelatraces | [EARLY ACCESS] ListTraceLogs: Get the logs for traces. |
 
 <a id="gettracediagram"></a>
 # **GetTraceDiagram**
 > TraceDiagramResponse GetTraceDiagram (string traceId)
 
-[EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+[EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace.
 
 ### Example
 ```csharp
@@ -61,7 +61,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // TraceDiagramResponse result = apiInstance.GetTraceDiagram(traceId, opts: opts);
 
-                // [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+                // [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace.
                 TraceDiagramResponse result = apiInstance.GetTraceDiagram(traceId);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -82,7 +82,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetTraceDiagram: Get the diagram representation for a specific trace.
+    // [EARLY ACCESS] GetTraceDiagram: Get the diagram representation for a specific trace.
     ApiResponse<TraceDiagramResponse> response = apiInstance.GetTraceDiagramWithHttpInfo(traceId);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -125,7 +125,7 @@ catch (ApiException e)
 # **GetTraceLog**
 > TraceLog GetTraceLog (string traceId)
 
-[EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+[EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
 
 ### Example
 ```csharp
@@ -173,7 +173,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // TraceLog result = apiInstance.GetTraceLog(traceId, opts: opts);
 
-                // [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+                // [EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
                 TraceLog result = apiInstance.GetTraceLog(traceId);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -194,7 +194,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetTraceLog: Get the log for a specific trace.
+    // [EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
     ApiResponse<TraceLog> response = apiInstance.GetTraceLogWithHttpInfo(traceId);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -237,7 +237,7 @@ catch (ApiException e)
 # **ListTraceEventLogs**
 > ResourceListOfTraceEventLog ListTraceEventLogs (string traceId, string? page = null)
 
-[EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+[EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
 
 ### Example
 ```csharp
@@ -286,7 +286,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfTraceEventLog result = apiInstance.ListTraceEventLogs(traceId, page, opts: opts);
 
-                // [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+                // [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
                 ResourceListOfTraceEventLog result = apiInstance.ListTraceEventLogs(traceId, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -307,7 +307,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListTraceEventLogs: Get the trace event logs for a specific trace.
+    // [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
     ApiResponse<ResourceListOfTraceEventLog> response = apiInstance.ListTraceEventLogsWithHttpInfo(traceId, page);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -351,7 +351,7 @@ catch (ApiException e)
 # **ListTraceLogs**
 > ResourceListOfTraceLog ListTraceLogs (string? filter = null, string? sortBy = null, int? limit = null, string? page = null)
 
-[EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
+[EARLY ACCESS] ListTraceLogs: Get the logs for traces.
 
 ### Example
 ```csharp
@@ -402,7 +402,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfTraceLog result = apiInstance.ListTraceLogs(filter, sortBy, limit, page, opts: opts);
 
-                // [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
+                // [EARLY ACCESS] ListTraceLogs: Get the logs for traces.
                 ResourceListOfTraceLog result = apiInstance.ListTraceLogs(filter, sortBy, limit, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -423,7 +423,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListTraceLogs: Get the logs for traces.
+    // [EARLY ACCESS] ListTraceLogs: Get the logs for traces.
     ApiResponse<ResourceListOfTraceLog> response = apiInstance.ListTraceLogsWithHttpInfo(filter, sortBy, limit, page);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
