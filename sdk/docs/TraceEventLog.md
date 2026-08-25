@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **AgentCode** | **string** | The code identifier of the agent currently being interacted with | 
 **AgentVersion** | **int** | The version of the circuit in which the trace event occurred. | 
 **NodeId** | **string** | The ID of the circuit&#39;s node at which the trace event occured. | 
+**RowId** | **string** | An opaque identifier for comparing complete trace event rows. | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
 ```csharp
@@ -29,6 +30,7 @@ string content = "content";
 string agentScope = "agentScope";
 string agentCode = "agentCode";
 string nodeId = "nodeId";
+string rowId = "example rowId";
 List<Link> links = new List<Link>();
 
 TraceEventLog traceEventLogInstance = new TraceEventLog(
@@ -42,6 +44,7 @@ TraceEventLog traceEventLogInstance = new TraceEventLog(
     agentCode: agentCode,
     agentVersion: agentVersion,
     nodeId: nodeId,
+    rowId: rowId,
     links: links);
 ```
 

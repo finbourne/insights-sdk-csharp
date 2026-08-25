@@ -33,10 +33,12 @@ namespace Finbourne.Insights.Sdk.Model
         /// </summary>
         /// <param name="nodes">The nodes that make up the diagram..</param>
         /// <param name="edges">The edges that connect the nodes in the diagram..</param>
-        public TraceDiagramResponse(List<TraceDiagramNode> nodes = default(List<TraceDiagramNode>), List<TraceDiagramEdge> edges = default(List<TraceDiagramEdge>))
+        /// <param name="isPossiblyIncomplete">Whether detected retrieval or diagram degradation means some events may not be shown..</param>
+        public TraceDiagramResponse(List<TraceDiagramNode> nodes = default(List<TraceDiagramNode>), List<TraceDiagramEdge> edges = default(List<TraceDiagramEdge>), bool isPossiblyIncomplete = default(bool))
         {
             this.Nodes = nodes;
             this.Edges = edges;
+            this.IsPossiblyIncomplete = isPossiblyIncomplete;
         }
 
         /// <summary>
@@ -54,6 +56,13 @@ namespace Finbourne.Insights.Sdk.Model
         public List<TraceDiagramEdge> Edges { get; set; }
 
         /// <summary>
+        /// Whether detected retrieval or diagram degradation means some events may not be shown.
+        /// </summary>
+        /// <value>Whether detected retrieval or diagram degradation means some events may not be shown.</value>
+        [DataMember(Name = "isPossiblyIncomplete", EmitDefaultValue = true)]
+        public bool IsPossiblyIncomplete { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +72,7 @@ namespace Finbourne.Insights.Sdk.Model
             sb.Append("class TraceDiagramResponse {\n");
             sb.Append("  Nodes: ").Append(Nodes).Append("\n");
             sb.Append("  Edges: ").Append(Edges).Append("\n");
+            sb.Append("  IsPossiblyIncomplete: ").Append(IsPossiblyIncomplete).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +119,10 @@ namespace Finbourne.Insights.Sdk.Model
                     this.Edges != null &&
                     input.Edges != null &&
                     this.Edges.SequenceEqual(input.Edges)
+                ) && 
+                (
+                    this.IsPossiblyIncomplete == input.IsPossiblyIncomplete ||
+                    this.IsPossiblyIncomplete.Equals(input.IsPossiblyIncomplete)
                 );
         }
 
@@ -129,6 +143,7 @@ namespace Finbourne.Insights.Sdk.Model
                 {
                     hashCode = (hashCode * 59) + this.Edges.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.IsPossiblyIncomplete.GetHashCode();
                 return hashCode;
             }
         }

@@ -15,10 +15,13 @@ Class | Method | HTTP request | Description
 *CandelaTracesApi* | [**GetTraceLog**](docs/CandelaTracesApi.md#gettracelog) | **GET** /api/candelatraces/{traceId} | [EARLY ACCESS] GetTraceLog: Get the log for a specific trace.
 *CandelaTracesApi* | [**ListTraceEventLogs**](docs/CandelaTracesApi.md#listtraceeventlogs) | **GET** /api/candelatraces/{traceId}/events | [EARLY ACCESS] ListTraceEventLogs: Get the trace event logs for a specific trace.
 *CandelaTracesApi* | [**ListTraceLogs**](docs/CandelaTracesApi.md#listtracelogs) | **GET** /api/candelatraces | [EARLY ACCESS] ListTraceLogs: Get the logs for traces.
+*LogMetadataApi* | [**ListQueryableFields**](docs/LogMetadataApi.md#listqueryablefields) | **GET** /api/metadata/logs | [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type.
+*MetricsApi* | [**GetMetrics**](docs/MetricsApi.md#getmetrics) | **GET** /api/metrics | [EARLY ACCESS] GetMetrics: Get the aggregated platform metrics for the caller's domain.
 *RequestsApi* | [**GetRequest**](docs/RequestsApi.md#getrequest) | **GET** /api/requests/{id}/request | GetRequest: Get the request content for a specific API request.
 *RequestsApi* | [**GetRequestLog**](docs/RequestsApi.md#getrequestlog) | **GET** /api/requests/{id} | GetRequestLog: Get the log for a specific API request.
 *RequestsApi* | [**GetResponse**](docs/RequestsApi.md#getresponse) | **GET** /api/requests/{id}/response | GetResponse: Get the response for a specific API request.
 *RequestsApi* | [**ListRequestLogs**](docs/RequestsApi.md#listrequestlogs) | **GET** /api/requests | ListRequestLogs: Get the logs for API requests.
+*RequestsApi* | [**QueryRequestLogs**](docs/RequestsApi.md#queryrequestlogs) | **POST** /api/requests/$query | QueryRequestLogs: Query the logs for API requests, returning only the caller-specified fields in addition to the always-required fields (Timestamp, Id, Application, Operation). The server fetches only the requested columns from the underlying data source to minimise payload and query time.
 *VendorLogsApi* | [**GetVendorLog**](docs/VendorLogsApi.md#getvendorlog) | **GET** /api/vendor/{id} | [EXPERIMENTAL] GetVendorLog: Get the log for a specific vendor request.
 *VendorLogsApi* | [**GetVendorRequest**](docs/VendorLogsApi.md#getvendorrequest) | **GET** /api/vendor/{id}/request | [EXPERIMENTAL] GetVendorRequest: Get the request body for a vendor request.
 *VendorLogsApi* | [**GetVendorResponse**](docs/VendorLogsApi.md#getvendorresponse) | **GET** /api/vendor/{id}/response | [EXPERIMENTAL] GetVendorResponse: Get the response from a vendor request.
@@ -38,20 +41,37 @@ Class | Method | HTTP request | Description
  - [AuditEntryNote](docs/AuditEntryNote.md)
  - [AuditProcess](docs/AuditProcess.md)
  - [AuditProcessSummary](docs/AuditProcessSummary.md)
+ - [BooleanComparator](docs/BooleanComparator.md)
  - [Bucket](docs/Bucket.md)
  - [CreateAuditEntry](docs/CreateAuditEntry.md)
+ - [DateComparator](docs/DateComparator.md)
  - [Histogram](docs/Histogram.md)
  - [IdSelectorDefinition](docs/IdSelectorDefinition.md)
  - [IdentifierPartSchema](docs/IdentifierPartSchema.md)
+ - [IdentityMetricsDataSet](docs/IdentityMetricsDataSet.md)
+ - [InsightsFilter](docs/InsightsFilter.md)
  - [Link](docs/Link.md)
  - [LusidProblemDetails](docs/LusidProblemDetails.md)
  - [LusidValidationProblemDetails](docs/LusidValidationProblemDetails.md)
+ - [MetricDataSetFailure](docs/MetricDataSetFailure.md)
+ - [MetricsResponse](docs/MetricsResponse.md)
+ - [NumericComparator](docs/NumericComparator.md)
  - [ProblemDetails](docs/ProblemDetails.md)
+ - [QueriedRequestLog](docs/QueriedRequestLog.md)
+ - [QueryRequestLogsRequest](docs/QueryRequestLogsRequest.md)
+ - [QueryableLogField](docs/QueryableLogField.md)
+ - [QueryableLogType](docs/QueryableLogType.md)
+ - [RelativeBoundary](docs/RelativeBoundary.md)
+ - [RelativeOffset](docs/RelativeOffset.md)
  - [Request](docs/Request.md)
  - [RequestLog](docs/RequestLog.md)
+ - [RequestsPerMinuteBucket](docs/RequestsPerMinuteBucket.md)
+ - [RequestsPerMinuteDataSet](docs/RequestsPerMinuteDataSet.md)
  - [Resource](docs/Resource.md)
  - [ResourceListOfAccessControlledResource](docs/ResourceListOfAccessControlledResource.md)
  - [ResourceListOfAuditProcessSummary](docs/ResourceListOfAuditProcessSummary.md)
+ - [ResourceListOfQueriedRequestLog](docs/ResourceListOfQueriedRequestLog.md)
+ - [ResourceListOfQueryableLogType](docs/ResourceListOfQueryableLogType.md)
  - [ResourceListOfTraceEventLog](docs/ResourceListOfTraceEventLog.md)
  - [ResourceListOfTraceLog](docs/ResourceListOfTraceLog.md)
  - [ResourceListWithHistogramOfAccessEvaluationLog](docs/ResourceListWithHistogramOfAccessEvaluationLog.md)
@@ -59,6 +79,12 @@ Class | Method | HTTP request | Description
  - [ResourceListWithHistogramOfVendorLog](docs/ResourceListWithHistogramOfVendorLog.md)
  - [Response](docs/Response.md)
  - [ScrollableCollectionOfAuditEntry](docs/ScrollableCollectionOfAuditEntry.md)
+ - [ServiceEndpointDuration](docs/ServiceEndpointDuration.md)
+ - [ServiceEndpointDurations24hDataSet](docs/ServiceEndpointDurations24hDataSet.md)
+ - [ServiceRequests](docs/ServiceRequests.md)
+ - [ServiceRequests24hDataSet](docs/ServiceRequests24hDataSet.md)
+ - [TextComparator](docs/TextComparator.md)
+ - [TimeRange](docs/TimeRange.md)
  - [TraceDiagramEdge](docs/TraceDiagramEdge.md)
  - [TraceDiagramNode](docs/TraceDiagramNode.md)
  - [TraceDiagramResponse](docs/TraceDiagramResponse.md)
