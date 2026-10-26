@@ -35,7 +35,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type.
         /// </summary>
         /// <remarks>
-        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -47,7 +47,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type.
         /// </summary>
         /// <remarks>
-        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -67,7 +67,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type.
         /// </summary>
         /// <remarks>
-        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -80,7 +80,7 @@ namespace Finbourne.Insights.Sdk.Api
         /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type.
         /// </summary>
         /// <remarks>
-        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </remarks>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -212,7 +212,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -225,7 +225,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -303,7 +303,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -317,7 +317,7 @@ namespace Finbourne.Insights.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Intended to power a UI that advertises the correct comparators for a chosen field.
+        /// [EARLY ACCESS] ListQueryableFields: List the queryable fields for every supported log type. Returns, for each log type, the fields that can be selected and/or filtered, their data types, and the comparator operations available for each filterable field. Where a field has a known set of values (for example the applications and operations of the platform&#39;s services) those values are also returned. Intended to power a UI that advertises the correct comparators and values for a chosen field.
         /// </summary>
         /// <exception cref="Finbourne.Insights.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
