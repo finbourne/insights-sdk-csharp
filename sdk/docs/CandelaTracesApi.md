@@ -75,7 +75,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetTraceDiagramWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -187,7 +186,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetTraceLogWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -300,7 +298,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListTraceEventLogsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -416,7 +413,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListTraceLogsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

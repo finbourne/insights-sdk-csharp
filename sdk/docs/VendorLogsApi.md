@@ -75,7 +75,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetVendorLogWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -187,7 +186,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetVendorRequestWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -299,7 +297,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetVendorResponseWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -415,7 +412,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListVendorLogsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

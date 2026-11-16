@@ -74,7 +74,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetMetricsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

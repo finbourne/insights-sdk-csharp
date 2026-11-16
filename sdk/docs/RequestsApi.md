@@ -76,7 +76,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetRequestWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -188,7 +187,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetRequestLogWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -300,7 +298,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetResponseWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -416,7 +413,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListRequestLogsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -532,7 +528,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the QueryRequestLogsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

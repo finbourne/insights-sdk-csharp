@@ -74,7 +74,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the CreateEntryWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -188,7 +187,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetProcessesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -300,7 +298,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListEntriesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

@@ -73,7 +73,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetAccessEvaluationLogWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -191,7 +190,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListAccessEvaluationLogsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
